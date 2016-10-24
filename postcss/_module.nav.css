@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------ *\
+	Nav Toggle
+\* ------------------------------------------------------------ */
+
+.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: 50%; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; @extend appearance; transition: top .45s ease; }
+.nav-toggle span { width: 20px; height: 3px; display: block; position: relative; top: 0px; left: 0px; margin: 0 auto 4px; background-color: $color-white; transform: rotate(0deg); transition: all .35s ease; }
+
+$breakpoint-large-desktop {
+	.nav-toggle { right: 40px; left: auto; margin: 0; }
+}
+
+$breakpoint-medium-desktop {
+	.nav-toggle { right: 15px; }
+}
+
+$breakpoint-tablet-portrait {
+	.nav-toggle { top: 25px; right: 15px; }
+}
+
+$breakpoint-mobile {
+	.nav-toggle { top: 23px; right: 11px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav { font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
+.nav a { display: inline-block; padding-right: 33px; border-bottom: 2px solid transparent; }
+.nav li { padding: 5px 0 3px; }
+.nav li ul { padding: 15px 0; }
+.nav li li { font-size: 20px; line-height: 2; padding: 6px 0; }
+
+.nav a:hover,
+.nav .current > a { text-decoration: none; border-bottom-color: $color-action; }
+
+.nav li li a:hover,
+.nav li .current > a { color: $color-action; }
+
+.nav-container { width: 388px; min-height: 100%; padding: 118px 25px 75px 72px; margin-left: auto; background-color: color($color-base a(70%)); transform: translateX(100%); transition: transform .35s ease; }
+
+$breakpoint-mobile {
+	.nav { font-size: 30px; }
+	.nav li { padding: 0; }
+	.nav li ul { padding: 0 0 10px; }
+	.nav a { padding: 8px 0; border: 0; }
+	.nav li li { font-size: 16px; line-height: 1.25; }
+	.nav li li a { padding: 7px 0; }
+
+	.nav-container { width: 100%; padding: 69px; background-color: $color-base; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Secondary
+\* ------------------------------------------------------------ */
+
+.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary li { float: left; }
+.nav-secondary a { color: color($color-white a(70%)); display: block; padding: 7px 8px; }
+.nav-secondary a:hover { color: $color-white; text-decoration: none; }
+
+$breakpoint-large-desktop {
+	.nav-secondary { padding-right: 50px; }
+}
+
+$breakpoint-mobile {
+	.nav-secondary { padding-right: 40px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Visible
+\* ------------------------------------------------------------ */
+
+.nav-visible { overflow: visible; }
+.nav-visible body { overflow: hidden; }
+.nav-visible .wrapper { height: 100%; margin-left: -50px; background-image: none; }
+.nav-visible .wrapper-secondary { background-image: url(images/wrapper-bg2.jpg); background-size:cover; height: auto;}
+.nav-visible .header { background-color: transparent; }
+
+.nav-visible .nav { z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: color($color-base a(70%)); }
+.nav-visible .nav-container { transform: translateX(0%); }
+
+.nav-visible .nav-toggle { margin-right: 17px; }
+.nav-visible .nav-toggle span:first-child { transform: rotate(135deg); top: 7px; }
+.nav-visible .nav-toggle span:nth-child(2) { left: -100px; }
+.nav-visible .nav-toggle span:last-child { transform: rotate(-135deg); top: -7px; }
+
+$breakpoint-tablet-portrait {
+	.nav-visible .nav-toggle { margin-right: 0; }
+}
+
+$breakpoint-mobile {
+	.nav-visible .nav { background-color: $color-base; }
+	.nav-visible .wrapper { margin: 0; }
+}

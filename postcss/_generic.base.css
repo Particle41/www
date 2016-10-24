@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+::selection { color: $color-white; background-color: color($color-action a(50%)); }
+
+html,
+body { height: 100%; }
+
+html { overflow-x: hidden; overflow-y: scroll; }
+body { font-family: $font-arimo; font-size: $font-size-base; line-height: $line-height-base; color: $color-white; font-weight: 400; font-style: normal; text-transform: none; text-decoration: none; letter-spacing: 0; word-spacing: 0; min-width: 320px; background: $color-base url(images/bgt.jpg) no-repeat 100% 0; background-size: 100% auto; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a[href^="tel"] { text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin-bottom: calc($(line-height-base)em / 2); }
+
+h1 { font-size: 70px; line-height: 1; font-weight: 400; }
+h1 strong { font-weight: 700; }
+
+h2 { font-size: 70px; line-height: 1; font-weight: 400; }
+h2 strong { font-weight: 700; }
+
+h3 { font-size: 30px; line-height: 1.2; font-weight: 400; }
+h3 strong { font-weight: 700; }
+
+h4 { font-size: 20px; line-height: 1.4; font-weight: 400; }
+h5 { font-size: 14px; line-height: 1.2; font-weight: 400; }
+h6 { font-size: 12px; font-weight: 700; }
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote { margin-bottom: $(line-height-base)em; }
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child { margin-bottom: 0; }
+
+a,
+img,
+input,
+select,
+button,
+textarea,
+.btn,
+.owl-dot { transition: color .35s ease, opacity .35s ease, border-color .35s ease, background-color .35s ease; }
+
+$breakpoint-tablet-portrait {
+	h1 { font-size: 50px; line-height: 1.1; }
+	h2 { font-size: 45px; line-height: 1.1; }
+}
+
+$breakpoint-mobile {
+	body { background-position: 70% 0; background-size: 300% auto; }
+
+	h1 { font-size: 40px; line-height: 1.25; }
+	h2 { font-size: 40px; line-height: 1; }
+}

@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Accordion
+\* ------------------------------------------------------------ */
+
+.accordion-head { border-bottom: 1px solid color($color-white a(20%)); cursor: pointer; }
+.accordion-head h3 { color: color($color-white a(70%)); position: relative; padding: 19px 40px 19px 0; transition: color .35s ease; }
+.accordion-head h3:before { width: 25px; height: 24px; border: 1px solid color($color-action a(90%)); margin-top: -12px; border-radius: 50%; }
+.accordion-head h3:after { @mixin chevron 8px, 1px, color($color-action a(90%)), -5px 8px 0 0, -45deg, 50% 50%, .4s;}
+
+.accordion-head h3:before,
+.accordion-head h3:after { content: ''; display: block; position: absolute; top: 50%; right: 2px; transition: all .3s ease; }
+
+.accordion-head:hover h3 { color: $color-white; }
+
+.accordion-body { color: color($color-white a(90%)); max-height: 0px; overflow: hidden; transform: scale(0); transform-origin: 50% 0; transition: all .4s ease; }
+.accordion-content { position: relative; padding: 43px 25px 46px 177px; }
+
+.accordion-image { width: 98px; height: 98px; position: absolute; top: 49px; left: 16px; }
+.accordion-image i { display: block; margin: auto; }
+
+.accordion-section-expanded .accordion-head h3 { color: $color-white; }
+.accordion-section-expanded .accordion-head h3:before { border-color: $color-action; background-color: $color-action; }
+.accordion-section-expanded .accordion-head h3:after { border-color: $color-base; margin-top: -2px; transform: rotate(-225deg); }
+
+.accordion-section-expanded .accordion-body { max-height: 800px; transform: scale(1); }
+
+$breakpoint-mobile {
+	.accordion-head h3 { padding: 20px 40px 20px 0; }
+	.accordion-content { padding: 41px 25px 17px 90px; }
+
+	.accordion-image { width: 60px; height: 60px; top: 50px; left: 0; }
+	.accordion-image .ico-mixer { width: 51px; height: 60px; }
+	.accordion-image .ico-lightbulb { width: 42px; height: 60px; }
+	.accordion-image .ico-scale { width: 60px; height: 60px; }
+	.accordion-image .ico-strategy { width: 60px; height: 60px; }
+}
+
+$breakpoint-mobile-medium {
+	.accordion-content { padding: 41px 0 17px 80px; }
+}

@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+	Testimonial
+\* ------------------------------------------------------------ */
+
+.testimonial { position: relative; padding: 0 70px 37px 108px; }
+.testimonial:before { content: '“'; font-size: 190px; line-height: 1; color: $color-action; position: absolute; top: -22px; left: -1px; }
+
+.testimonial h5 { padding-left: 5px; }
+.testimonial h5 strong { color: $color-action; font-weight: 400; }
+
+.testimonial p { color: color($color-white a(80%)); font-style: italic; margin-bottom: 26px; }
+
+$breakpoint-medium-desktop {
+	.testimonial { padding: 0 0 37px 108px; }
+}
+
+$breakpoint-mobile {
+	.testimonial { padding-left: 103px; }
+	.testimonial:before { left: -6px; }
+}

@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { min-height: 100%; position: relative; margin-left: 0px; background: url(images/bgb.jpg) no-repeat 50% 100%; background-size: 100% auto; transition: margin .3s ease; }
+
+/* Wrapper-secondary */
+
+.wrapper-secondary { background: url(images/wrapper-bg2.jpg) no-repeat center top; background-size:cover; }
+
+$breakpoint-mobile {
+	.wrapper { background-size: 200% auto; }
+
+	.wrapper-secondary { background-size: cover;}
+}

@@ -1,0 +1,11 @@
+/* ------------------------------------------------------------ *\
+	Owl Carousel theme
+\* ------------------------------------------------------------ */
+
+.owl-dots { font-size: 0; line-height: 0; }
+
+.owl-dot { width: 10px; height: 10px; display: inline-block; vertical-align: top; background-color: color($color-white a(20%)); border-radius: 50%; }
+.owl-dot:hover { background-color: $color-white; }
+.owl-dot + .owl-dot { margin-left: 10px; }
+
+.owl-dot.active { background-color: #78c1ff; }

@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn { text-align: center; display: inline-block; vertical-align: middle; cursor: pointer; @extend appearance; }
+
+/*  Button Block  */
+
+.btn-block { display: block; padding-left: 0; padding-right: 0; }
+
+/*  Button Primary  */
+
+.btn-primary { font-size: 14px; line-height: 1.29; color: $color-white; text-transform: uppercase; letter-spacing: 2px; padding: 11px 20px; border-bottom: 2px solid $color-action; }
+.btn-primary:before { content: '+'; color: $color-action; padding-right: 12px; }
+.btn-primary:hover { text-decoration: none; background-color: $color-base; }
+
+$breakpoint-mobile {
+	.btn-primary { letter-spacing: 0.23em; }
+}

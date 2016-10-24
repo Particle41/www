@@ -1,0 +1,126 @@
+/* ------------------------------------------------------------ *\
+	Tabs
+\* ------------------------------------------------------------ */
+
+.tabs .tabs-head { border-bottom: 1px solid #3c85c0; position: relative; }
+
+.tabs .tabs-head:before { content: ''; background: #3c85c0; height: 1px; position: absolute; bottom: -1px; right:100%; width: 100%; }
+
+.tabs .tabs-head:after { content: ''; background: #3c85c0; height: 1px; position: absolute; bottom: -1px; left:100%; width: 100%; }
+
+.tabs .tabs-body { padding: 90px 80px 0; }
+
+$breakpoint-medium-desktop {
+	.tabs .tabs-body { padding: 90px 0 0; }
+}
+
+$breakpoint-mobile {
+	.tabs .tabs-body { padding-top: 40px; }
+}
+/* ------------------------------------------------------------ *\
+	Tabs-nav
+\* ------------------------------------------------------------ */
+
+.tabs-nav { text-align: center; }
+
+.tabs-nav li { display: inline-block; }
+
+.tabs-nav a { display: inline-block; border-bottom: 2px solid transparent; padding: 24px 28px 24px 26px; text-decoration: none; border-radius: 5px 5px 0 0; position: relative; }
+
+.tabs-nav a:hover:before { content: ''; position: absolute; bottom: -6px; left: 0; height: 3px; background: #3c85c0; width: 100%; }
+
+.tabs-nav a i { margin-right: 15px; }
+.tabs-nav a span { display: inline-block; vertical-align: middle; }
+
+.tabs-nav .current a { background: #05233c; border-bottom-color: #3c85c0; color: #8fcdff; }
+
+.tabs-nav .ico-app { width: 17px; height: 26px; }
+.tabs-nav .ico-cloud { width: 29px; height: 18px; }
+.tabs-nav .ico-gear { width: 26px; height: 26px; }
+.tabs-nav .ico-ken { width: 22px; height: 26px; }
+.tabs-nav .ico-box { width: 23px; height: 26px; }
+.tabs-nav .ico-paperplane { width: 26px; height: 26px; }
+
+
+$breakpoint-medium-desktop {
+	.tabs-nav a { padding: 14px 5px; }
+
+	.tabs-nav a i { margin-right: 5px; }
+
+}
+
+$breakpoint-tablet-portrait{
+	.tabs-nav { position: relative; height: 50px; }
+	
+	.tabs-nav ul { list-style: none; position: absolute; top: 0; left: 0; width: 100%; z-index: 5; background: #05233c; z-index: 1; border-radius: 5px 5px 0 0; }
+
+	.tabs-nav li { width: 100%; display: none; height: 50px; position: relative; cursor: pointer; color: #fff; }
+
+	.tabs-nav .current { display: block; }
+	.tabs-nav .current a { border-bottom: none; }
+	
+	.tabs-nav li a { display: block; padding: 5px 10px; position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); text-decoration: none; }
+
+	.tabs-nav li i { display: inline-block; width: 50px; height: 20px; }
+
+	.tabs-nav .tabs-nav-toggle { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; cursor: pointer; border-bottom: 2px solid #3c85c0; }
+
+	.tabs-nav .tabs-nav-toggle:before { width: 25px; height: 24px; border: 1px solid color($color-action a(90%)); margin-top: -12px; border-radius: 50%; }
+	.tabs-nav .tabs-nav-toggle:after { @mixin chevron 8px, 1px, color($color-action a(90%)), -5px 8px 0 0, -45deg, 50% 50%, .4s;}
+
+	.tabs-nav .tabs-nav-toggle:before,
+	.tabs-nav .tabs-nav-toggle:after { content: ''; display: block; position: absolute; top: 50%; right: 10px; transition: all .3s ease; }
+
+	.tabs-nav.open .tabs-nav-toggle { display: none; }
+	.tabs-nav.open li { display: block; }
+}
+/* ------------------------------------------------------------ *\
+	Tab
+\* ------------------------------------------------------------ */
+
+.tab { padding: 0 72px; }
+
+.tab .tab-head { text-align: center; margin-bottom: 150px; padding: 0 50px; }
+
+.tab .tab-head h2 { color: $color-action; margin-bottom: 40px; font-size: 50px; }
+
+.tab .tab-head h2 strong { color: $color-white; }
+
+.tab .tab-head h4 { font-size: 18px; line-height: 1.78; }
+
+.tab .tab-section { margin-bottom: 110px; }
+.tab .tab-section:last-child { margin-bottom: 0; }
+
+.tab .tab-section h3 { margin-bottom: 40px; }
+
+.tab .tab-section:after { @extend clearfix; }
+
+.tab .tab-section-content { float: left; width: 50%; }
+
+.tab .tab-section-image { width: 50%; padding-top: 15px; }
+
+.tab .tab-image-left { float: left; }
+.tab .tab-image-right { float: right; }
+
+
+$breakpoint-small-desktop {
+	.tab { padding: 0; }
+}
+
+$breakpoint-mobile{
+	.tab .tab-head { margin-bottom: 30px; padding: 0; }
+
+	.tab .tab-head h2 { font-size: 30px; }
+	.tab .tab-head h4 { font-size: 16px; }
+
+	.tab .tab-image-left,
+	.tab .tab-image-right { float: none;  }
+
+	.tab .tab-section { margin-bottom: 30px; }
+	
+	.tab .tab-section h3 { font-size: 24px; }
+
+	.tab .tab-section-image { width: 100%; text-align: center; margin-bottom: 30px; }
+
+	.tab .tab-section-content { width: 100%; float: none; }
+}

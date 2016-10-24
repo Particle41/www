@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------ *\
+	Process
+\* ------------------------------------------------------------ */
+
+.process { list-style: none outside none; counter-reset: process; }
+.process:after { @extend clearfix; }
+
+.process h4 { margin-bottom: 36px; }
+.process h4:before { content: counter(process) '. '; counter-increment: process; color: $color-action; }
+.process p { line-height: 1.5; color: color($color-white a(87%)); }
+
+.process-icon { width: 51px; height: 51px; display: block; position: absolute; border: 1px solid color(#4798da a(70%)); background-color: color(#083558 a(70%)); border-radius: 50%; }
+.process-icon i { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+.process-icon-large { width: 106px; height: 106px; }
+
+.process-item { width: 443px; height: 443px; float: left; position: relative; border: 1px solid color(#4798da a(40%)); border-radius: 50%; transition: margin-top .4s ease .3s; }
+
+.process-item:first-child { padding: 144px 104px 0 84px; margin-left: -5px; }
+.process-item:first-child .process-icon { top: -16px; left: 60px; }
+.process-item:first-child .process-icon i { transform: translateY(5px); }
+
+.process-item:nth-child(2) { padding: 137px 94px 0 95px; margin: 0 0 0 -62px; }
+.process-item:nth-child(2) .process-icon { top: -20px; left: 128px; }
+
+.process-item:nth-child(3) { padding: 133px 104px 0 91px; margin: 0 0 0 -66px; }
+.process-item:nth-child(3) h4 { margin-bottom: 26px; }
+.process-item:nth-child(3) .process-icon { top: 14px; left: 65px; }
+
+.process-item:nth-child(4) { padding: 140px 74px 0 104px; margin: 0 -4px 0 -77px; }
+.process-item:nth-child(4) h4 { padding-right: 30px; margin-bottom: 28px; }
+.process-item:nth-child(4) .process-icon { top: -24px; left: 162px; }
+
+$breakpoint-animations {
+	.process-icon { transform: scale(0); transition: transform .4s ease .7s; }
+	.process-content { opacity: 0; visibility: hidden; transition: opacity .4s ease .7s, visibility .4s ease .7s; }
+
+	.process.animated-in .process-icon { transform: scale(1); }
+	.process.animated-in .process-content { opacity: 1; visibility: visible; }
+	
+	.process.animated-in .process-item:nth-child(2) { margin-top: 117px; }
+	.process.animated-in .process-item:nth-child(3) { margin-top: -70px; }
+	.process.animated-in .process-item:nth-child(4) { margin-top: 52px; }
+}
+
+$breakpoint-large-desktop {
+	.process .process-item { width: 25%; height: 0; padding: 100px 60px 17.5%; margin: 0; }
+	.process .process-item h4 { margin-bottom: 10px; }
+
+	.process-item:first-child .process-icon { top: -40px; }
+	.process-item:nth-child(2) .process-icon { top: -25px; }
+	.process-item:nth-child(3) .process-icon { top: -5px; }
+	.process-item:nth-child(4) h4 { padding: 0; }
+}
+
+$breakpoint-medium-desktop {
+	.process { font-size: 0; line-height: 0; text-align: center; }
+	.process .process-item { font-size: $font-size-base; line-height: $line-height-base; text-align: left; width: 50%; padding-bottom: 41.283%; }
+
+	.process-item:first-child .process-icon { top: 0; }
+	
+	.process-item:nth-child(2) .process-icon,
+	.process-item:nth-child(3) .process-icon,
+	.process-item:nth-child(4) .process-icon { top: 9px; left: 128px; }
+
+	.process-content { width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+}
+
+$breakpoint-small-desktop {
+	.process-item:first-child .process-icon { top: -15px; }
+
+	.process-item:nth-child(2) .process-icon,
+	.process-item:nth-child(3) .process-icon,
+	.process-item:nth-child(4) .process-icon { top: -6px; }
+}
+
+$breakpoint-tablet-portrait {
+	.process .process-item { width: 45vw; height: 45vw; padding: 0; margin-bottom: 30px; }
+	.process .process-item .process-icon { top: 2px; left: 50px; }
+
+	.process .process-item:nth-child(even) { float: right; margin-top: 30px; }
+	.process .process-item:first-child .process-icon { top: -40px; }
+
+	.process-content { width: 60%; }
+}
+
+$breakpoint-mobile {
+	.process .process-item { width: auto; height: auto; float: none; padding: 0 0 49px 78px; border: 0; margin: 0; border-radius: 0; }
+	.process .process-item h4 { margin-bottom: 33px; }
+	.process .process-item .process-icon { top: 5px; left: 0; }
+
+	.process .process-item:nth-child(even) { float: none; margin: 0; }
+
+	.process .process-item:first-child .process-icon { width: 51px; height: 51px; top: 5px; left: 1px; }
+	.process .process-item:first-child .process-icon i { width: 23px; height: 21px; transform: translateY(2px); }
+
+	.process .process-item:nth-child(3) { padding-bottom: 43px; }
+	.process .process-item:nth-child(3) h4 { margin-bottom: 24px; }
+
+	.process .process-item:nth-child(4) h4 { margin-bottom: 28px; }
+
+	.process-content { width: auto; position: static; top: auto; left: auto; transform: none; }
+}

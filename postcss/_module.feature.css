@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------ *\
+	Feature
+\* ------------------------------------------------------------ */
+
+.features { list-style: none; margin-bottom: 94px; }
+
+.features:after { @extend clearfix; }
+
+.features .feature { float: left; width: 33%; }
+
+.feature { text-align: center; padding: 0 71px; }
+
+.feature .feature-title { min-height:112px; line-height: 112px;}
+
+.feature .feature-title span { display: inline-block; vertical-align: middle; line-height: normal; }
+
+.feature .feature-body p { font-family: $font-lato; color: rgba(255, 255, 255, 0.8); }
+
+.feature .feature-icon {  text-align: center; position: relative; width: 125px; height: 125px; margin: 0 auto; }
+
+.feature .feature-icon span { background: #05233c; display: block; border-radius: 50%; height: 100%; position: relative; z-index: 2; }
+
+.feature .feature-icon:before { content: ''; position: absolute; border: 1px solid rgba(71, 152, 218, 0.5); border-radius: 50%; z-index: 1; }
+
+.feature .feature-icon i { position: relative; top: 50%; transform:translateY(-50%); }
+
+.feature-secondary .feature-icon span,
+.feature-quinary .feature-icon span { background: rgba(5, 35, 60, 0.6); }
+
+.feature-tertiary .feature-icon span { background: rgba(5, 35, 60, 0.4); }
+
+.feature-senary .feature-icon span { background: rgba(5, 35, 60, 0.3); }
+
+/* Feature-primary */
+
+.feature-primary .feature-icon:before { width: 72px; height: 72px; top: -2px; left: -5px; }
+
+/* Feature-secondary */
+
+.feature-secondary .feature-icon:before { width: 62px; height: 62px; top: -16px; right: -15px;  z-index: 3; }
+
+/* Feature- tertiary */
+
+.feature-tertiary .feature-icon:before  { width: 48px; height: 48px;  bottom: -7px; left: -7px; z-index: 3; }
+
+/* Feature-quaternary */
+
+.feature-quaternary .feature-icon:before  { width: 72px; height: 72px; bottom: -9px; right: -16px; z-index: 1; }
+
+/* Feature-quinary */
+
+.feature-quinary .feature-icon:before  { width: 55px; height: 55px; z-index: 3; top: -9px; ; left: -25px; z-index: 3; }
+
+/* Feature-senary */
+
+.feature-senary .feature-icon:before  { width: 72px; height: 72px; bottom: -10px; right: -11px; z-index: 3; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+$breakpoint-large-desktop  {
+	.feature { padding: 0 30px; }
+}
+
+$breakpoint-tablet-portrait {
+	.feature { padding: 0 10px; }	
+
+	.feature .feature-title { font-size: 24px; }
+}
+
+$breakpoint-mobile {
+	.features { margin-bottom: 0; }
+	
+	.features .feature { float: none; width: 100%; margin-bottom: 50px; }
+}
+

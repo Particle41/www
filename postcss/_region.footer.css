@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer { text-align: center; position: relative; padding: 94px 0 74px; }
+.footer:before { content: ''; width: 1200px; height: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: color($color-base a(20%)); border-radius: 50%; }
+
+.footer .copyright { font-size: 12px; line-height: 1.75; color: color($color-white a(50%)); }
+
+.footer-body { position: relative; z-index: 2; }
+
+$breakpoint-animations {
+	.footer.animated { opacity: 1; visibility: visible; transition: none; }
+	.footer.animated:before { transform: translateY(100%) scale(0); transition: transform .5s ease; }
+
+	.footer.animated-in:before { transform: translateY(0%) scale(1); }
+}
+
+$breakpoint-mobile {
+	.footer { padding: 62px 0 52px; }
+	.footer:before { width: 926px; height: 926px; margin-left: -463px; }
+}

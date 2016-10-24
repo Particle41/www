@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	List
+\* ------------------------------------------------------------ */
+
+[class^="list-"] { list-style: none outside none; }
+
+/* ------------------------------------------------------------ *\
+	List Clients
+\* ------------------------------------------------------------ */
+
+.list-clients { font-size: 0; line-height: 0; text-align: center; }
+.list-clients li { display: inline-block; vertical-align: top; padding: 0 18px; }
+.list-clients img { width: auto; height: 39px; display: block; @extend unselectable; }
+
+$breakpoint-small-desktop {
+	.list-clients li { padding: 0 5px; }
+}
+
+$breakpoint-tablet-portrait {
+	.list-clients li { padding-bottom: 20px; }
+}
+
+$breakpoint-mobile {
+	.list-clients { max-width: 325px; margin: auto; }
+	.list-clients li { padding: 0 8px 30px; }
+	.list-clients img { height: 20px; opacity: .7; }
+}
+
+/* ------------------------------------------------------------ *\
+	List Socials
+\* ------------------------------------------------------------ */
+
+.list-socials { font-size: 0; line-height: 0; text-align: center; padding-bottom: 28px; }
+.list-socials li { display: inline-block; vertical-align: top; padding: 0 10px; }
+.list-socials a { display: block; opacity: 1; }
+.list-socials a:hover { opacity: .6; }
+
+/* ------------------------------------------------------------ *\
+	List Checks
+\* ------------------------------------------------------------ */
+
+.list-checks { padding-right: 50px; }
+
+.list-checks li { padding-left: 60px; position: relative; margin-bottom: 32px; line-height: 2; }
+
+.list-checks li i { position: absolute; top: 7px; left: 16px; }
+
+/* List-checks-secondary*/
+
+.list-checks-secondary li { padding-left: 69px; }
+.list-checks-secondary li i { top: 3px; left: 25px;}
+
+$breakpoint-mobile {
+	.list-checks { padding-right: 0; }
+
+	.list-checks li { padding-left: 40px; }
+	.list-checks li i { left: 0px;  }
+}

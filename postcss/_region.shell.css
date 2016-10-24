@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell { max-width: 1590px; padding-top: 156px; padding-right: 15px; padding-left: 15px; margin: auto; }
+
+$breakpoint-large-desktop {
+	.shell { max-width: 1440px; }
+}
+
+$breakpoint-medium-desktop {
+	.shell { max-width: 1200px; }
+}
+
+$breakpoint-small-desktop {
+	.shell { max-width: 1024px; }
+}
+
+$breakpoint-mobile {
+	.shell { padding-top: 102px; padding-right: 25px; padding-left: 25px; }
+}
+
+$breakpoint-mobile-small {
+	.shell { padding-right: 10px; padding-left: 10px; }
+}

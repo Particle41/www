@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	Icons
+\* ------------------------------------------------------------ */
+
+[class^="ico-"] { @extend notext; display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: 0 0; background-size: 100% 100%; }
+
+.ico-facebook { width: 15px; height: 18px; background-image: url(images/ico-facebook.png); }
+.ico-google-plus { width: 18px; height: 18px; background-image: url(images/ico-google-plus.png); }
+.ico-graph { width: 17px; height: 23px; background-image: url(images/ico-graph.png); }
+.ico-lightbulb { width: 68px; height: 98px; background-image: url(images/ico-lightbulb.png); }
+.ico-linkedin { width: 18px; height: 18px; background-image: url(images/ico-linkedin.png); }
+.ico-mixer { width: 83px; height: 98px; background-image: url(images/ico-mixer.png); }
+.ico-reload { width: 48px; height: 43px; background-image: url(images/ico-reload.png); }
+.ico-scale { width: 98px; height: 98px; background-image: url(images/ico-scale.png); }
+.ico-strategy { width: 98px; height: 98px; background-image: url(images/ico-strategy.png); }
+.ico-target { width: 23px; height: 23px; background-image: url(images/ico-target.png); }
+.ico-twitter { width: 19px; height: 18px; background-image: url(images/ico-twitter.png); }
+.ico-webpage { width: 23px; height: 19px; background-image: url(images/ico-webpage.png); }
+.ico-app { width: 45px; height: 65px; background-image: url(images/ico-app.png); }
+.ico-box { width: 57px; height: 65px; background-image: url(images/ico-box.png);  }
+.ico-cloud { width: 72px; height: 43px; background-image: url(images/ico-cloud.png); }
+.ico-gear { width: 65px; height: 65px; background-image: url(images/ico-gear.png);  }
+.ico-ken { width: 55px; height: 65px; background-image: url(images/ico-ken.png); }
+.ico-paperplane { width: 55px; height: 65px; background-image: url(images/ico-paperplane.png); }
+
+.ico-check { width: 25px; height: 25px; background: url(images/ico-check.svg); background-size:cover;}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.ico-facebook { background-image: url(images/ico-facebook@2x.png); }
+	.ico-google-plus { background-image: url(images/ico-google-plus@2x.png); }
+	.ico-graph { background-image: url(images/ico-graph@2x.png); }
+	.ico-lightbulb { background-image: url(images/ico-lightbulb@2x.png); }
+	.ico-linkedin { background-image: url(images/ico-linkedin@2x.png); }
+	.ico-mixer { background-image: url(images/ico-mixer@2x.png); }
+	.ico-reload { background-image: url(images/ico-reload@2x.png); }
+	.ico-scale { background-image: url(images/ico-scale@2x.png); }
+	.ico-strategy { background-image: url(images/ico-strategy@2x.png); }
+	.ico-target { background-image: url(images/ico-target@2x.png); }
+	.ico-twitter { background-image: url(images/ico-twitter@2x.png); }
+	.ico-webpage { background-image: url(images/ico-webpage@2x.png); }
+	.ico-app { background-image: url(images/ico-app@2x.png); }
+	.ico-box { background-image: url(images/ico-box@2x.png); }
+	.ico-cloud { background-image: url(images/ico-cloud@2x.png); }
+	.ico-gear { background-image: url(images/ico-gear@2x.png); }
+	.ico-ken { background-image: url(images/ico-ken@2x.png); }
+	.ico-paperplane { background-image: url(images/ico-paperplane@2x.png); }
+	
+}

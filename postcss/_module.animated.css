@@ -1,0 +1,8 @@
+/* ------------------------------------------------------------ *\
+	Animated
+\* ------------------------------------------------------------ */
+
+$breakpoint-animations {
+	.animated { opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility .5s ease, margin .5s ease, transform .5s ease; }
+	.animated-in { opacity: 1; visibility: visible; }
+}
