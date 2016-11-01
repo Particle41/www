@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Comments
+\* ------------------------------------------------------------ */
+
+.comments { padding: 0; margin: 0; list-style: none outside none; }
+
+.comment { padding: 71px 0 50px; }
+.comment:last-child { padding-bottom: 0; }
+
+.comment-content { border-bottom: 1px solid rgba(71,152,218,.2); overflow: hidden; }
+.comment-entry { font-size: 14px; line-height: 2; color: rgba(255,255,255,.8); padding-top: 26px; }
+.comment-meta { font-size: 14px; line-height: 1.5; color: #8fcdff; text-align: right; padding: 27px 0 50px; }
+
+.comment-author { font-size: 16px; line-height: 1.5; text-align: center; width: 165px; height: 165px; display: flex; align-items: center; float: left; padding: 0 40px; border: 1px solid rgba(45,111,161,.5); margin-right: 35px; border-radius: 50%; }
+.comment-author span { width: 100%; display: block; }
+
+.comments .comments { padding-left: 200px; }
+.comments .comments .comment { padding-top: 60px; }
+
+$breakpoint-tablet-portrait {
+	.comment { padding: 40px 0 20px; }
+	.comment-meta { padding: 25px 0 30px; }
+
+	.comment-author { width: 120px; height: 120px; padding: 5px 10px 0; }
+
+	.comments .comments { padding-left: 155px; }
+	.comments .comments .comment { padding-top: 40px; }
+}
+
+$breakpoint-mobile {
+	.comment-author { text-align: left; width: auto; height: auto; display: block; float: none; border: 0; padding: 0; margin: 0; }
+
+	.comments .comments { padding-left: 30px; }
+}

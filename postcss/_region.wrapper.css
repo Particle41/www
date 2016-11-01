@@ -4,12 +4,22 @@
 
 .wrapper { min-height: 100%; position: relative; margin-left: 0px; background: url(images/bgb.jpg) no-repeat 50% 100%; background-size: 100% auto; transition: margin .3s ease; }
 
-/* Wrapper-secondary */
+/*  Wrapper-secondary  */
 
-.wrapper-secondary { background: url(images/wrapper-bg2.jpg) no-repeat center top; background-size:cover; }
+.wrapper-secondary { background-image: url(images/bgb2.png); }
+
+.wrapper-secondary .container { position: relative; }
+.wrapper-secondary .container:before { content: ''; width: 1200px; height: 1200px; opacity: .2; position: absolute; top: 0; left: 50%; z-index: -1; margin-left: -600px; background-color: #082d4a; border-radius: 50%; }
+
+@media ( min-width: 1601px ) {
+	.wrapper-secondary .header-inner { padding-right: 54px; }
+	.wrapper-secondary .nav-toggle { margin-left: 665px; }
+}
+
+@media ( min-width: 1024px ) {
+	.wrapper-secondary .main:not(.main-primary) .footer { padding: 74px 0 94px; }
+}
 
 $breakpoint-mobile {
 	.wrapper { background-size: 200% auto; }
-
-	.wrapper-secondary { background-size: cover;}
 }

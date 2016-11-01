@@ -5,4 +5,40 @@
 input::placeholder { color: inherit; opacity: 1; }
 textarea::placeholder { color: inherit; opacity: 1; }
 
-input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0 1000px #fff inset; }
+input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: $color-white; box-shadow: 0 0 0 1000px $color-white inset; }
+
+.field,
+.select,
+.textarea { font-size: 14px; line-height: 1.5; color: #fff; width: 100%; height: 36px; display: block; padding: 0 22px 11px 22px; border-width: 2px 0; border-style: solid; border-color: transparent transparent $color-action; background: transparent; border-radius: 0; box-shadow: none; transition: border-color .4s ease; }
+
+.textarea { height: 200px; resize: none; }
+.textarea.field { height: 36px; }
+
+.form-actions { text-align: right; padding-top: 55px; margin-right: -3px; }
+.form-label { font-size: 14px; line-height: 1.5; letter-spacing: 0.15em; opacity: 1; position: absolute; top: 0px; left: 0; padding: 13px 22px; pointer-events: none; transition: all .2s ease; }
+.form-asterisk { padding-left: 2px; }
+.form-row { position: relative; padding-top: 11px; margin-top: 54px; }
+
+.form-cols { margin: 0 -30px; }
+.form-cols:after { @extend clearfix; }
+.form-col { width: 50%; float: left; padding: 0 30px; }
+
+.form-btn { letter-spacing: 3px; padding: 11px 0; border: 0; background: none; }
+.form-btn:hover { opacity: .5; background: none; }
+
+.field:focus ~ .form-label,
+.textarea:focus ~ .form-label,
+.select:focus ~ .form-label,
+.field.filled ~ .form-label,
+.textarea.filled ~ .form-label,
+.select.filled ~ .form-label { font-size: 12px; line-height: 1.75; top: -25px; opacity: .5; }
+
+$breakpoint-small-desktop {
+	.form-cols { margin: 0 -10px; }
+	.form-col { padding: 0 10px; }
+}
+
+$breakpoint-mobile {
+	.form-cols { margin: 0; }
+	.form-col { width: auto; float: none; padding: 0; }
+}

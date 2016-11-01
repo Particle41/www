@@ -43,7 +43,7 @@ $breakpoint-mobile {
 	.nav { font-size: 30px; }
 	.nav li { padding: 0; }
 	.nav li ul { padding: 0 0 10px; }
-	.nav a { padding: 8px 0; border: 0; }
+	.nav a { padding: 8px 0 6px; }
 	.nav li li { font-size: 16px; line-height: 1.25; }
 	.nav li li a { padding: 7px 0; }
 
@@ -92,4 +92,63 @@ $breakpoint-tablet-portrait {
 $breakpoint-mobile {
 	.nav-visible .nav { background-color: $color-base; }
 	.nav-visible .wrapper { margin: 0; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Services
+\* ------------------------------------------------------------ */
+
+.nav-services { text-align: center; position: relative; padding-top: 4px; }
+.nav-services:before { content: ''; width: 100vw; height: 1px; position: absolute; bottom: -1px; left: 50%; margin-left: -50vw; background: #3c85c0; }
+
+.nav-services li { display: inline-block; }
+.nav-services a { text-decoration: none; display: inline-block; position: relative; padding: 24px 28px 24px 26px; border-bottom: 2px solid transparent; border-radius: 5px 5px 0 0; }
+.nav-services a i { margin-right: 15px; }
+.nav-services a span { display: inline-block; vertical-align: middle; }
+
+.nav-services a:hover:before { content: ''; width: 100%; height: 3px; position: absolute; bottom: -6px; left: 0; background: #3c85c0; }
+
+.nav-services .current a { color: #8fcdff; border-bottom-color: #3c85c0; background: #05233c; }
+
+.nav-services .ico-app { width: 17px; height: 26px; }
+.nav-services .ico-cloud { width: 29px; height: 18px; }
+.nav-services .ico-gear { width: 26px; height: 26px; }
+.nav-services .ico-ken { width: 22px; height: 26px; }
+.nav-services .ico-box { width: 23px; height: 26px; }
+.nav-services .ico-paperplane { width: 26px; height: 26px; }
+
+$breakpoint-medium-desktop {
+	.nav-services { padding-top: 0; }
+	.nav-services a { padding: 14px 15px; }
+	.nav-services a i { margin-right: 5px; }
+}
+
+$breakpoint-small-desktop {
+	.nav-services ul { margin: 0 -15px; }
+	.nav-services a { padding: 14px 7px; }
+	.nav-services a i { margin-right: 2px; }
+}
+
+$breakpoint-tablet-portrait{
+	.nav-services { height: 50px; position: relative; }
+	.nav-services ul { width: 100%; display: flex; flex-wrap: wrap; position: absolute; top: 0; left: 0; z-index: 1; margin: 0; background: #05233c; border-radius: 5px 5px 0 0; }
+	.nav-services li { width: 100%; height: 50px; display: none; position: relative; cursor: pointer; color: #fff; }
+	.nav-services li a { text-decoration: none; display: block; position: absolute; top: 50%; left: 0; width: 100%; padding: 5px 10px; transform: translateY(-50%); }
+	.nav-services li i { width: 50px; height: 20px; display: inline-block; }
+
+	.nav-services .current { width: 100%; display: block; }
+	.nav-services .current a { border-bottom: none; }
+	
+	.nav-services .nav-services-toggle { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 2; border-bottom: 2px solid #3c85c0; cursor: pointer; }
+
+	.nav-services .nav-services-toggle:before { width: 25px; height: 24px; border: 1px solid color($color-action a(90%)); margin-top: -12px; border-radius: 50%; }
+	.nav-services .nav-services-toggle:after { @mixin chevron 8px, 1px, color($color-action a(90%)), -5px 8px 0 0, -45deg, 50% 50%, .4s;}
+
+	.nav-services .nav-services-toggle:before,
+	.nav-services .nav-services-toggle:after { content: ''; display: block; position: absolute; top: 50%; right: 10px; transition: all .3s ease; }
+
+	.nav-services.open li { display: block; order: 2; }
+	.nav-services.open li.current { order: 1; }
+
+	.nav-services.open .nav-services-toggle { display: none; }
 }

@@ -6,12 +6,12 @@
 		<header class="header">
 			<div class="shell">
 				<div class="header-inner">
-					<a href="#" class="logo"></a>
+					<a href="home.html" class="logo"></a>
 
 					<nav class="nav-secondary">
 						<ul>
 							<li>
-								<a href="#">Contact Us</a>
+								<a href="contact.html">Contact Us</a>
 							</li>
 						</ul>
 					</nav><!-- /.nav-secondary -->
@@ -26,55 +26,3 @@
 			
 			<span></span> 
 		</button>
-
-		<nav class="nav">
-			<div class="nav-container">
-				<ul>
-					<li class="current">
-						<a href="#">Services</a>
-
-						<ul>
-							<li>
-								<a href="#">Migration Services</a>
-							</li>
-							
-							<li>
-								<a href="#">Application Development</a>
-							</li>
-							
-							<li>
-								<a href="#">Deployment</a>
-							</li>
-							
-							<li class="current">
-								<a href="#">Automation</a>
-							</li>
-							
-							<li>
-								<a href="#">Smart Data</a>
-							</li>
-							
-							<li>
-								<a href="#">Managed Services</a>
-							</li>
-						</ul>
-					</li>
-					
-					<li>
-						<a href="#">Projects</a>
-					</li>
-					
-					<li>
-						<a href="#">Partners</a>
-					</li>
-					
-					<li>
-						<a href="#">Blog</a>
-					</li>
-				</ul>
-			</div><!-- /.nav-container -->
-		</nav><!-- /.nav -->
-	
-		<div class="container">
-			<div class="shell">
-				<div class="main">

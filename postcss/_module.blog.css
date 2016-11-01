@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------ *\
+	Blog Items
+\* ------------------------------------------------------------ */
+
+.blog-items { padding: 0; margin: 0; list-style: none outside none; }
+.blog-items:after { @extend clearfix; }
+
+.blog-item { width: 50%; float: left; position: relative; padding: 0 95px 113px 144px; }
+.blog-item:nth-child(even) + li { clear: left; }
+
+.blog-item h3 { margin: 0 0 19px -3px; }
+.blog-item h3 a:hover { color: $color-action; text-decoration: none; }
+.blog-item h6 { font-size: 14px; line-height: 1.5; color: $color-action; font-weight: 400; margin: 0 0 19px; }
+.blog-item p { line-height: 2; opacity: .8; margin-bottom: 46px; }
+.blog-item .btn { letter-spacing: 3px; }
+
+.blog-item-icon { width: 100px; height: 100px; display: block; position: absolute; top: -12px; left: 0; background-color: #05233c; border-radius: 50%; }
+.blog-item-icon i { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+
+$breakpoint-small-desktop {
+	.blog-item { padding: 0 20px 80px 0; }
+	.blog-item h3 { padding-left: 100px; margin: 0 0 20px; }
+	.blog-item h6 { margin: 0 0 15px; }
+	.blog-item p { margin: 0 0 20px; }
+
+	.blog-item-icon { width: 80px; height: 80px; top: -3px; }
+}
+
+$breakpoint-tablet-portrait {
+	.blog-item { width: auto; float: none; }
+}
+
+$breakpoint-mobile {
+	.blog-item br,
+	.blog-item-icon { display: none; }
+	
+	.blog-item h3 { font-size: 24px; padding: 0; }
+}

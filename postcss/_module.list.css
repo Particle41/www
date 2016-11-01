@@ -40,10 +40,9 @@ $breakpoint-mobile {
 \* ------------------------------------------------------------ */
 
 .list-checks { padding-right: 50px; }
-
-.list-checks li { padding-left: 60px; position: relative; margin-bottom: 32px; line-height: 2; }
-
+.list-checks li { line-height: 2; position: relative; padding-left: 60px; margin-bottom: 32px; }
 .list-checks li i { position: absolute; top: 7px; left: 16px; }
+.list-checks li strong { color: $color-action; }
 
 /* List-checks-secondary*/
 
@@ -52,7 +51,39 @@ $breakpoint-mobile {
 
 $breakpoint-mobile {
 	.list-checks { padding-right: 0; }
-
 	.list-checks li { padding-left: 40px; }
 	.list-checks li i { left: 0px;  }
+}
+
+/* ------------------------------------------------------------ *\
+	List Case Studies
+\* ------------------------------------------------------------ */
+
+.list-case-studies:after { @extend clearfix; }
+
+.list-case-studies li { width: 33.33%; width: calc(100% / 3); float: left; padding: 0 20px 145px; }
+.list-case-studies a { width: 220px; height: 220px; display: block; position: relative; margin: auto; background: rgba(5,35,60,.5); border-radius: 50%; }
+.list-case-studies a:before { content: '+'; font-size: 16px; line-height: 1.19; color: $color-action; font-weight: 700; text-align: center; width: 71px; height: 71px; display: block; position: absolute; padding: 24px 0; border: 1px solid rgba(71,152,218,.5); border-radius: 50%; transition: all .4s ease; }
+.list-case-studies img { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+
+.list-case-studies a:hover { text-decoration: none; background: rgba(5,35,60,.9); }
+.list-case-studies a:hover:before { color: $color-white; border-color: $color-action; background-color: $color-action; }
+
+.list-case-studies .list-item-1 a:before { font-size: 17px; line-height: 1.12; width: 93px; height: 93px; bottom: 1px; right: -51px; padding: 37px 0; }
+.list-case-studies .list-item-2 a:before { top: -23px; left: -12px; }
+.list-case-studies .list-item-3 a:before { width: 76px; height: 76px; top: -31px; left: -5px; padding: 27px 0; }
+.list-case-studies .list-item-4 a:before { font-size: 17px; line-height: 1.12; width: 79px; height: 79px; bottom: -20px; left: -20px; padding: 29px 0; }
+.list-case-studies .list-item-5 a:before { width: 74px; height: 74px; top: -49px; right: 30px; padding: 26px 0; }
+.list-case-studies .list-item-6 a:before { width: 68px; height: 68px; bottom: -1px; right: -31px; padding: 23px 0; }
+.list-case-studies .list-item-7 a:before { width: 60px; height: 60px; top: -19px; right: 3px; padding: 19px 0; }
+.list-case-studies .list-item-8 a:before { width: 75px; height: 75px; top: 2px; right: -31px; padding: 26px 0; }
+
+$breakpoint-tablet-portrait {
+	.list-case-studies li { width: 50%; }
+}
+
+$breakpoint-mobile {
+	.list-case-studies li { width: 100%; padding-bottom: 60px; }
+	.list-case-studies li:nth-child(odd) a:before { top: -30px; bottom: auto; left: auto; right: -5px; }
+	.list-case-studies li:nth-child(even) a:before { top: -30px; bottom: auto; left: -5px; right: auto; }
 }

@@ -2,7 +2,7 @@
 	Icons
 \* ------------------------------------------------------------ */
 
-[class^="ico-"] { @extend notext; display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: 0 0; background-size: 100% 100%; }
+[class^="ico-"] { white-space: nowrap; text-indent: 100%; text-shadow: none; overflow: hidden; display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: 0 0; background-size: 100% 100%; }
 
 .ico-facebook { width: 15px; height: 18px; background-image: url(images/ico-facebook.png); }
 .ico-google-plus { width: 18px; height: 18px; background-image: url(images/ico-google-plus.png); }
@@ -22,8 +22,11 @@
 .ico-gear { width: 65px; height: 65px; background-image: url(images/ico-gear.png);  }
 .ico-ken { width: 55px; height: 65px; background-image: url(images/ico-ken.png); }
 .ico-paperplane { width: 55px; height: 65px; background-image: url(images/ico-paperplane.png); }
-
-.ico-check { width: 25px; height: 25px; background: url(images/ico-check.svg); background-size:cover;}
+.ico-envelope { width: 38px; height: 24px; background-image: url(images/ico-envelope.png); }
+.ico-marker { width: 25px; height: 37px; background-image: url(images/ico-marker.png); }
+.ico-smartphone { width: 20px; height: 38px; background-image: url(images/ico-smartphone.png); }
+.ico-check { width: 25px; height: 25px; background: url(images/ico-check.svg); background-size: cover; }
+.ico-pencil { width: 31px; height: 50px; background-image: url(images/ico-pencil.png); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	.ico-facebook { background-image: url(images/ico-facebook@2x.png); }
@@ -44,5 +47,8 @@
 	.ico-gear { background-image: url(images/ico-gear@2x.png); }
 	.ico-ken { background-image: url(images/ico-ken@2x.png); }
 	.ico-paperplane { background-image: url(images/ico-paperplane@2x.png); }
-	
+	.ico-envelope { background-image: url(images/ico-envelope@2x.png); }
+	.ico-marker { background-image: url(images/ico-marker@2x.png); }
+	.ico-smartphone { background-image: url(images/ico-smartphone@2x.png); }
+	.ico-pencil { background-image: url(images/ico-pencil@2x.png); }
 }

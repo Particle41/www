@@ -1,6 +1,8 @@
+'use strict';
+
 $(document).ready(function() {
 
-var URL = 'https://pzpabvxh6b.execute-api.us-east-1.amazonaws.com/prod/ContactUs'
+var URL = 'https://pzpabvxh6b.execute-api.us-east-1.amazonaws.com/prod/ContactUs';
 
   $('#contact-form').submit(function (event) {
     event.preventDefault();
@@ -8,7 +10,7 @@ var URL = 'https://pzpabvxh6b.execute-api.us-east-1.amazonaws.com/prod/ContactUs
       name: $('#name-input').val(),
       email: $('#email-input').val(),
       description: $('#description-input').val()
-    }
+  };
 
     $.ajax({
       type: 'POST',
@@ -22,6 +24,6 @@ var URL = 'https://pzpabvxh6b.execute-api.us-east-1.amazonaws.com/prod/ContactUs
       error: function () {
         // show an error message
       }
-    })
-  })
-})
+  });
+  });
+});

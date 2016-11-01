@@ -38,23 +38,33 @@
 
 @import '_module.animated.css';
 
+@import '_module.article.css';
+
+@import '_module.blog.css';
+
 @import '_module.btn.css';
+
+@import '_module.comment.css';
+
+@import '_module.contacts.css';
 
 @import '_module.feature.css';
 
 @import '_module.form-elements.css';
 
+@import '_module.form.css';
+
 @import '_module.list.css';
 
 @import '_module.nav.css';
+
+@import '_module.partner.css';
 
 @import '_module.process.css';
 
 @import '_module.section.css';
 
 @import '_module.service.css';
-
-@import '_module.tab.css';
 
 @import '_module.testimonial.css';
 

@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	Form Contact
+\* ------------------------------------------------------------ */
+
+.form-contact { max-width: 1170px; padding: 26px 0 200px; margin: auto; }
+.form-contact h1 { color: $color-action; margin: 0 0 25px; }
+.form-contact h1 strong { color: $color-white; }
+.form-contact .contacts { margin: 22px 0 50px 132px; }
+
+.form-contact .form-head { text-align: center; padding-bottom: 150px; }
+.form-contact .form-head p { font-size: 18px; line-height: 1.5; }
+
+.form-contact .form-body:after { @extend clearfix; }
+
+.form-contact .form-content { float: left; }
+.form-contact .form-aside { float: right; }
+
+.form-contact .form-content,
+.form-contact .form-aside { width: 575px; }
+
+$breakpoint-medium-desktop {
+	.form-contact .form-content,
+	.form-contact .form-aside { width: 50%; }
+
+	.form-contact .contacts { margin: 22px 0 50px 50px; }
+}
+
+$breakpoint-small-desktop {
+	.form-contact { padding: 0 0 50px; }
+	.form-contact .form-head { padding-bottom: 100px; }
+	.form-contact .form-content { width: 40%; }
+	.form-contact .form-aside { width: 55%; }
+}
+
+$breakpoint-tablet-portrait {
+	.form-contact .contacts { max-width: 500px; margin: 0 auto 50px; }
+
+	.form-contact .form-content,
+	.form-contact .form-aside { width: auto; float: none; }
+	
+	.form-contact .form-head { padding-bottom: 40px; }
+	.form-contact .form-aside { padding-top: 100px; }
+}
+
+$breakpoint-mobile {
+	.form-contact .form-head { padding-bottom: 20px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Form Comments
+\* ------------------------------------------------------------ */
+
+.form-comments { padding: 3px 0 43px; }
+.form-comments h3 { font-size: 26px; color: $color-action; margin-bottom: 11px; }
+.form-comments h3 strong { color: $color-white; font-weight: 400; }
+
+.form-comments .form-head { font-size: 16px; line-height: 2; color: rgba(255,255,255,.8); padding-bottom: 11px; }
+.form-comments .form-row { margin-top: 32px; }
+.form-comments .form-actions { padding-top: 37px; }

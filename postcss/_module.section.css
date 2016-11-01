@@ -9,7 +9,7 @@
 .section-intro .section-glow,
 .section-intro .section-images img { display: block; position: absolute; }
 
-.section-intro .section-images img { z-index: 3; /*@extend unselectable;*/ }
+.section-intro .section-images img { z-index: 3; @extend unselectable; }
 .section-intro .section-images img:first-child { left: 335px; top: -256px; z-index: 5; }
 .section-intro .section-images img:nth-child(2) { left: 196px; top: 36px; z-index: 4; }
 .section-intro .section-images img:nth-child(3) { left: 146px; top: 406px; z-index: 3; }
@@ -261,34 +261,313 @@ $breakpoint-mobile {
 .section-features { position: relative; z-index: 3; padding:28px 80px 130px; }
 
 .section-features .section-head { text-align: center; margin-bottom: 90px; }
-
 .section-features .section-head h2 { color: $color-action; margin-bottom: 25px; }
-
 .section-features .section-head h2 strong { color: $color-white; }
-
 .section-features .section-head h4 { font-size: 18px; }
 
-
 $breakpoint-large-desktop  {
-	.section-features{ padding: 28px 0 90px; }
+	.section-features { padding: 28px 0 90px; }
+}
+
+$breakpoint-medium-desktop {
+	.section-features { padding: 28px 0 0; }
+}
+
+$breakpoint-mobile {
+	.section-features { padding: 0; }
+	.section-features .section-head { margin-bottom: 50px; }
 }
 
 /* ------------------------------------------------------------ *\
-	Section-tabs
+	Section Service
 \* ------------------------------------------------------------ */
 
-.section-tabs { padding-bottom: 80px; }
+.section-service { padding: 90px 152px 80px; }
 
-/* Mobile */
+.section-service .list-checks li i { top: 3px; }
 
-$breakpoint-mobile {
-	.section-tabs  { padding-bottom: 30px; }
+.section-service .section-head { text-align: center; padding: 2px 50px 0; margin-bottom: 150px; }
+.section-service .section-head h2 { font-size: 50px; color: $color-action; margin-bottom: 40px; }
+.section-service .section-head h2 strong { color: $color-white; }
+.section-service .section-head h4 { font-size: 18px; line-height: 1.78; }
+
+.section-service .section-inner { margin-bottom: 110px; }
+.section-service .section-inner:last-child { margin-bottom: 0; }
+.section-service .section-inner:after { @extend clearfix; }
+.section-service .section-inner h3 { margin-bottom: 40px; }
+
+.section-service .section-content { width: 50%; float: left; }
+.section-service .section-content p { line-height: 2; }
+
+.section-service .section-image { width: 50%; padding-top: 15px; }
+
+.section-service .section-image-left { float: left; }
+.section-service .section-image-right { float: right; }
+
+/*  Section Service Migration  */
+
+.section-service-migration { padding-bottom: 176px; }
+
+.section-service-migration .list-checks-secondary { padding-right: 0; }
+
+.section-service-migration .section-image img { display: block; margin: auto; }
+
+.section-service-migration .section-image-left { padding: 11px 0 0 20px; }
+
+.section-service-migration .section-image-right { padding: 58px 56px 0 0; }
+.section-service-migration .section-image-right + .section-content { padding-left: 9px; }
+
+/*  Section Service Managed  */
+
+.section-service-managed { padding-bottom: 36px; }
+
+.section-service-managed .section-head { margin-bottom: 111px; }
+.section-service-managed .section-inner { margin-bottom: 0; }
+.section-service-managed .section-content { padding-top: 108px; }
+
+.section-service-managed .section-image img { display: block; margin: auto; }
+.section-service-managed .section-image-left { padding-right: 80px; }
+.section-service-managed .section-image-right { padding: 2px 45px 0 0; }
+.section-service-managed .section-image-right + .section-content { padding: 153px 0 0 10px; }
+
+/*  Section Service Smart Data  */
+
+.section-service-smart-data { padding-bottom: 100px; }
+
+.section-service-smart-data .section-inner { margin-bottom: 191px; }
+.section-service-smart-data .section-content { padding-top: 33px; }
+.section-service-smart-data .section-image-left { padding: 9px 0 0 26px; }
+
+.section-service-smart-data .section-image-right { padding-left: 58px; }
+.section-service-smart-data .section-image-right + .section-content { padding: 65px 0 0 8px; }
+
+/*  Section Service Automation  */
+
+.section-service-automation { padding-bottom: 54px; }
+
+.section-service-automation .section-inner { margin-bottom: 142px; }
+.section-service-automation .section-image-left { padding: 35px 0 0 58px; }
+
+.section-service-automation .section-image-right { text-align: center; width: 52%; padding-top: 54px; }
+.section-service-automation .section-image-right + .section-content { width: 48%; padding-left: 7px; }
+.section-service-automation .section-image-right + .section-content h3 { margin-bottom: 36px; }
+
+/*  Section Service Deployment  */
+
+.section-service-deployment .list-checks { padding: 0; }
+.section-service-deployment .section-inner { margin-bottom: 154px; }
+
+.section-service-deployment .section-image-left { padding-right: 84px; padding-top: 7px; }
+.section-service-deployment .section-image-left img { display: block; margin: auto; }
+
+.section-service-deployment .section-image-right { padding: 24px 0 0 74px; }
+.section-service-deployment .section-image-right + .section-content { padding: 0 50px 0 7px; }
+
+$breakpoint-large-desktop {
+	.section-service-smart-data { padding-bottom: 80px; }
+	.section-service-smart-data .section-inner { margin-bottom: 100px; }
+	
+	.section-service-automation .section-head,
+	.section-service-deployment .section-head { margin-bottom: 100px; }
 }
 
+$breakpoint-medium-desktop {
+	.section-service,
+	.section-service-migration,
+	.section-service-managed { padding: 90px 0 80px; }
 
+	.section-service-managed .section-head { margin-bottom: 80px; }
 
+	.section-service-smart-data .section-head,
+	.section-service-deployment .section-inner { margin-bottom: 100px; }
+}
 
+$breakpoint-small-desktop {
+	.section-service { padding: 90px 0 80px; }
+	.section-service br { display: none; }
+	
+	.section-service-managed { padding: 90px 0 30px; }
+	.section-service-managed .section-inner { margin-bottom: 50px; }
+	.section-service-managed .section-content { padding-top: 100px; }
 
+	.section-service-managed .section-image-left { padding-right: 30px; }
+	.section-service-managed .section-image-right { padding: 0; }
+	.section-service-managed .section-image-right + .section-content { padding: 50px 0 0; }
 
+	.section-service-deployment .section-image-left { padding: 10px 50px 0 0; }
+	.section-service-deployment .section-image-right { padding: 25px 0 0 50px; }
+	.section-service-deployment .section-image-right + .section-content { padding: 10px 0 0; }
+}
 
+$breakpoint-tablet-portrait {
+	.section-service-primary .section-image,
+	.section-service-primary .section-content,
+	.section-service-automation .section-image-right + .section-content { width: auto; float: none; }
 
+	.section-service-primary .section-head { margin-bottom: 80px; }
+	.section-service-primary .section-inner { margin-bottom: 50px; }
+	.section-service-primary .section-image { padding: 0 0 50px; }
+	.section-service-primary .section-image img { display: block; margin: auto; }
+
+	.section-service-managed .list-checks { padding: 0; }
+
+	.section-service-managed .section-content { padding-top: 20px; }
+	.section-service-managed .section-image-right { padding: 80px 0 0 20px; }
+
+	.section-service-smart-data .section-image-right + .section-content { padding: 20px 0 0; }
+}
+
+$breakpoint-mobile{
+	.section-service,
+	.section-service-migration { padding: 40px 0 30px; }
+
+	.section-service .section-head { margin-bottom: 30px; padding: 0; }
+	.section-service .section-head h2 { font-size: 30px; }
+	.section-service .section-head h4 { font-size: 16px; }
+
+	.section-service .section-image-left,
+	.section-service .section-image-right { float: none;  }
+
+	.section-service .section-inner { margin-bottom: 30px; }
+	.section-service .section-inner h3 { font-size: 24px; }
+
+	.section-service .section-image { width: 100%; text-align: center; margin-bottom: 30px; }
+	.section-service .section-content { width: 100%; float: none; }
+
+	.section-service-primary .section-head,
+	.section-service-primary .section-inner { margin-bottom: 30px; }
+
+	.section-service-primary .section-image { margin: 0; }
+	
+	.section-service-managed .section-image { padding: 0; }
+	.section-service-managed .section-image-right + .section-content { padding: 0; }
+
+	.section-service-smart-data .section-content { padding: 0; }
+
+	.section-service-primary .section-image-right { padding: 15px 0 40px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section Case Studies
+\* ------------------------------------------------------------ */
+
+.section-case-studies { padding: 26px 0 38px; }
+
+.section-case-studies .section-head { text-align: center; padding-bottom: 117px; }
+.section-case-studies .section-head h1 { color: $color-action; margin-bottom: 23px; }
+.section-case-studies .section-head h1 strong { color: $color-white; }
+.section-case-studies .section-head p { font-size: 18px; line-height: 1.5; }
+
+.section-case-studies .section-body { padding: 0 98px; }
+
+$breakpoint-large-desktop {
+	.section-case-studies .section-body { padding: 0; }
+}
+
+$breakpoint-medium-desktop {
+	.section-case-studies { padding: 25px 0 0; }
+}
+
+$breakpoint-mobile {
+	.section-case-studies { padding: 0; }
+	.section-case-studies .section-head { padding-bottom: 50px; }	
+}
+
+/* ------------------------------------------------------------ *\
+	Section Project
+\* ------------------------------------------------------------ */
+
+.section-project { line-height: 2; max-width: 1170px; padding: 43px 0 58px; margin: auto; }
+.section-project p { margin-bottom: 2em; }
+.section-project hr { height: 1px; opacity: .2; border: 0; margin: 55px 0 60px; background-color: #fff; }
+
+.section-project h2,
+.section-project h3 { color: $color-action; }
+
+.section-project h2 strong,
+.section-project h3 strong { color: $color-white; }
+
+.section-project h2 { font-size: 50px; }
+.section-project h3 { font-size: 26px; margin-bottom: 26px; }
+.section-project h3 strong { font-weight: 400; }
+
+.section-project .section-head { text-align: center; padding-bottom: 104px; }
+.section-project .section-head h2 { margin-bottom: 25px; }
+.section-project .section-head p { font-size: 18px; line-height: 1.78; margin: 0; }
+
+.section-project .section-block { padding-bottom: 94px; }
+.section-project .section-block:after { @extend clearfix; }
+
+.section-project .section-image { width: 465px; position: relative; float: left; padding: 25px 0 0 87px; }
+.section-project .section-image:before { content: ''; width: 270px; height: 270px; display: block; position: absolute; top: -7px; left: 0; z-index: 1; border: 1px solid rgba(71,152,218,.5); border-radius: 50%; }
+.section-project .section-image img { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+.section-project .section-image figure { width: 310px; height: 310px; position: relative; z-index: 2; background-color: rgba(5,35,60,.9); border-radius: 50%; }
+
+.section-project .section-entry { overflow: hidden; }
+
+.section-project .section-body { padding-left: 56px; }
+.section-project .section-body p { opacity: .9; }
+.section-project .section-body h3 { margin-left: -56px; }
+
+$breakpoint-tablet-portrait {
+	.section-project { padding: 0 0 20px; }
+	
+	.section-project .section-head { padding-bottom: 80px; }
+	.section-project .section-block { padding-bottom: 50px; }
+
+	.section-project .section-image { max-width: 310px; float: none; padding: 0; margin: 0 auto 50px; }
+	.section-project .section-image:before { top: -30px; left: -50px; }
+}
+
+$breakpoint-mobile {
+	.section-project .section-body { padding: 0; }
+	.section-project .section-body h3 { margin-left: 0; }
+}
+
+$breakpoint-mobile-small {
+	.section-project .section-image figure { width: 300px; height: 300px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section Blog
+\* ------------------------------------------------------------ */
+
+.section-blog { max-width: 1240px; padding: 25px 0 36px; margin: auto; }
+.section-blog h1 { color: $color-action; margin-bottom: 25px; }
+.section-blog h1 strong { color: $color-white; }
+
+.section-blog .section-head { font-size: 18px; line-height: 1.5; text-align: center; padding: 0 30px 145px; }
+
+$breakpoint-small-desktop {
+	.section-blog { padding: 0; }
+	.section-blog .section-head { padding: 0 0 100px; }
+}
+
+$breakpoint-mobile {
+	.section-blog .section-head { padding-bottom: 50px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section Partners
+\* ------------------------------------------------------------ */
+
+.section-partners { max-width: 1170px; padding: 26px 0; margin: auto; }
+
+.section-partners .section-head { font-size: 18px; line-height: 1.5; text-align: center; padding-bottom: 133px; }
+.section-partners .section-head h1 { color: $color-action; margin: 0 0 25px; }
+.section-partners .section-head h1 strong { color: $color-white; }
+
+$breakpoint-small-desktop {
+	.section-partners { max-width: 992px; }
+}
+
+$breakpoint-tablet-portrait {
+	.section-partners { padding: 0 0 30px; }
+
+	.section-partners .section-head { padding-bottom: 100px; }
+	.section-partners .section-body { max-width: 750px; margin: auto; }
+}
+
+$breakpoint-mobile {
+	.section-partners .section-head { padding-bottom: 30px; }
+}
