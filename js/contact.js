@@ -20,16 +20,20 @@ $(document).ready(function () {
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(data),
-            success: function () {
-                // TODO: Show a success message!
+            success: function (data) {
+                console.log(data);
                 console.log('Successfully sent email.');
+                // TODO: Show a success message!
+                window.alert("Thank you! We'll be in touch shortly.");
                 $('#contact-form').find("#name").val("");
                 $('#contact-form').find("#email").val("");
                 $('#contact-form').find("#phone").val("");
                 $('#contact-form').find("#message").val("");
             },
-            error: function () {
+            error: function (err) {
+                console.log(err);
                 console.log('Failed to send email.');
+                window.alert("There was an error, please try again.");
                 // TODO: show an error message
             }
         });
