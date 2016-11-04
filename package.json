@@ -4,8 +4,8 @@
     "description": "Task runner",
     "author": null,
     "scripts": {
-        "postinstall": "gulp build",
-        "start": "gulp"
+        "start": "node app",
+        "postinstall": "gulp default"
     },
     "dependencies": {},
     "devDependencies": {
