@@ -5,7 +5,7 @@
   "author": null,
   "scripts": {
     "start": "node app",
-    "postinstall": "gulp default"
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "express": "^4.14.0"
