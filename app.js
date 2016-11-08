@@ -8,7 +8,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static('build'));
 
 app.get('/', function(req, res) {
-    res.sendfile('/home.html');
+    res.sendfile('build/home.html');
 });
 
 app.listen(app.get('port'), function () {
