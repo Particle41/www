@@ -19,7 +19,7 @@
 	var winW             = $win.width();
 	var winH             = $win.height();
 	var winO             = $win.scrollTop();
-	
+
 	var animatedClass    = 'animated-in';
 	var accordionClass   = 'accordion-section-expanded';
 	var scrolledClass    = 'scrolled';
@@ -28,10 +28,10 @@
 
 	/**
 	 * Animate elements in a section based on section's index
-	 * 
+	 *
 	 * @param  {Number} indx 		The index of the section
-	 * 
-	 * @return {Void} 
+	 *
+	 * @return {Void}
 	 */
 	function animatedElements(indx) {
 		$animated.removeClass(animatedClass);
@@ -43,9 +43,9 @@
 
 	/**
 	 * Set a form element's filled state
-	 * 
+	 *
 	 * @param {Object} $field 		The field to manipulate
-	 * 
+	 *
 	 * @return {Void}
 	 */
 	function setFormElementFilledState($field) {
@@ -96,7 +96,7 @@
 					$('html, body').removeAttr('style');
 				};
 			},
-			navigation: false, 
+			navigation: false,
 			onLeave: function(index, nextIndex, direction) {
 				if ( $services.index() === (index - 1) ) {
 					if ( scrollTimer < 5 ) {
