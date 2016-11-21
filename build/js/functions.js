@@ -70,24 +70,14 @@
         autoplay: true,
         autoplayTimeout: 12000,
         items: 1,
-		startPosition: 5,
+		startPosition: 0,
         loop: true
     });
-
-// 	//Waypoints test to reset Testimonials Slider on scroll-to
-// 	var testimonials = new Waypoint({
-//   element: document.getElementById('testimonials'),
-//   handler: function(direction) {
-//     console.log('Scrolled to testimonials waypoint!');
-// 	$testimonials.owlCarousel.reinit();
-// },
-//   offset: "50%"
-// })
 
     // About taglines fader
     $taglines.owlCarousel({
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 4000,
         dots: false,
         items: 1,
         loop: true,
