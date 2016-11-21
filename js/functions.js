@@ -1,178 +1,190 @@
-;(function($, window, document, undefined) {
-	var $win             = $(window);
-	var $doc             = $(document);
-	var $html            = $(document.documentElement);
-	var $header          = $('.header');
-	var $footer          = $('.footer');
-	var $animated        = $('.animated');
-	var $fullpage        = $('#fullpage');
-	var $navToggle       = $('.nav-toggle');
-	var $accordionHead   = $('.accordion-head');
-	var $testimonials    = $('.slider-testimonials');
-	var $fullpageSection = $('.section-fullpage');
-	var $taglines        = $('.slider-about .owl-carousel');
-	var $services        = $('.section-services');
-	var $background      = $('#background');
-	var $servicesNav     = $('.nav-services');
-	var $servicesToggle  = $('#navMenuToggle');
+;
+(function ($, window, document, undefined) {
+    var $win = $(window);
+    var $doc = $(document);
+    var $html = $(document.documentElement);
+    var $header = $('.header');
+    var $footer = $('.footer');
+    var $animated = $('.animated');
+    var $fullpage = $('#fullpage');
+    var $navToggle = $('.nav-toggle');
+    var $accordionHead = $('.accordion-head');
+    var $testimonials = $('.slider-testimonials');
+    var $fullpageSection = $('.section-fullpage');
+    var $taglines = $('.slider-about .owl-carousel');
+    var $services = $('.section-services');
+    var $background = $('#background');
+    var $servicesNav = $('.nav-services');
+    var $servicesToggle = $('#navMenuToggle');
 
-	var winW             = $win.width();
-	var winH             = $win.height();
-	var winO             = $win.scrollTop();
+    var winW = $win.width();
+    var winH = $win.height();
+    var winO = $win.scrollTop();
 
-	var animatedClass    = 'animated-in';
-	var accordionClass   = 'accordion-section-expanded';
-	var scrolledClass    = 'scrolled';
+    var animatedClass = 'animated-in';
+    var accordionClass = 'accordion-section-expanded';
+    var scrolledClass = 'scrolled';
 
-	var scrollTimer      = 0;
+    var scrollTimer = 0;
 
-	/**
-	 * Animate elements in a section based on section's index
-	 *
-	 * @param  {Number} indx 		The index of the section
-	 *
-	 * @return {Void}
-	 */
-	function animatedElements(indx) {
-		$animated.removeClass(animatedClass);
-		$fullpageSection.eq(indx - 1).find('.animated').addClass(animatedClass);
-		$header.toggleClass(scrolledClass, indx > 1);
-		$footer.toggleClass(animatedClass, indx === $fullpageSection.length);
-		$background.css('transform', 'translateY(-' + ((indx - 1) * 100) + 'vh)');
-	};
+    /**
+     * Animate elements in a section based on section's index
+     *
+     * @param  {Number} indx 		The index of the section
+     *
+     * @return {Void}
+     */
+    function animatedElements(indx) {
+        $animated.removeClass(animatedClass);
+        $fullpageSection.eq(indx - 1).find('.animated').addClass(animatedClass);
+        $header.toggleClass(scrolledClass, indx > 1);
+        $footer.toggleClass(animatedClass, indx === $fullpageSection.length);
+        $background.css('transform', 'translateY(-' + ((indx - 1) * 100) + 'vh)');
+    };
 
-	/**
-	 * Set a form element's filled state
-	 *
-	 * @param {Object} $field 		The field to manipulate
-	 *
-	 * @return {Void}
-	 */
-	function setFormElementFilledState($field) {
-		$field.toggleClass('filled', $.trim($field.val()) !== '');
-	};
+    /**
+     * Set a form element's filled state
+     *
+     * @param {Object} $field 		The field to manipulate
+     *
+     * @return {Void}
+     */
+    function setFormElementFilledState($field) {
+        $field.toggleClass('filled', $.trim($field.val()) !== '');
+    };
 
-	// Navigation toggle
-	$navToggle.on('click', function(event) {
-		event.preventDefault();
+    // Navigation toggle
+    $navToggle.on('click', function (event) {
+        event.preventDefault();
 
-		$html.toggleClass('nav-visible');
-	});
+        $html.toggleClass('nav-visible');
+    });
 
-	// Accordion
-	$accordionHead.on('click', function() {
-		$(this).parent().toggleClass(accordionClass).siblings().removeClass(accordionClass);
-	});
+    // Accordion
+    $accordionHead.on('click', function () {
+        $(this).parent().toggleClass(accordionClass).siblings().removeClass(accordionClass);
+    });
 
-	// Testimonials Slider
-	$testimonials.owlCarousel({
-		autoplay: true,
-		autoplayTimeout: 5000,
-		items: 1,
-		smartSpeed: 700
-	});
+    // Testimonials Slider
+    $testimonials.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 12000,
+        items: 1,
+		startPosition: 5,
+        loop: true
+    });
 
-	// About taglines fader
-	$taglines.owlCarousel({
-		autoplay: true,
-		autoplayTimeout: 5000,
-		dots: false,
-		items: 1,
-		loop: true,
-		nav: false,
-		smartSpeed: 700
-	});
+// 	//Waypoints test to reset Testimonials Slider on scroll-to
+// 	var testimonials = new Waypoint({
+//   element: document.getElementById('testimonials'),
+//   handler: function(direction) {
+//     console.log('Scrolled to testimonials waypoint!');
+// 	$testimonials.owlCarousel.reinit();
+// },
+//   offset: "50%"
+// })
 
-	// Fullpage Initialization
-	if ( winW > 1279 ) {
-		$fullpage.fullpage({
-			afterRender: function() {
-				var allSections = $(this).find('.section-fullpage').length;
+    // About taglines fader
+    $taglines.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        dots: false,
+        items: 1,
+        loop: true,
+        nav: false,
+        smartSpeed: 2000
+    });
 
-				$background.height(allSections * 100 + 'vh');
-			},
-			afterResponsive: function(isResponsive) {
-				if ( isResponsive ) {
-					$('html, body').removeAttr('style');
-				};
-			},
-			navigation: false,
-			onLeave: function(index, nextIndex, direction) {
-				if ( $services.index() === (index - 1) ) {
-					if ( scrollTimer < 5 ) {
-						scrollTimer++;
+    // Fullpage Initialization
+    if(winW > 1279) {
+        $fullpage.fullpage({
+            afterRender: function () {
+                var allSections = $(this).find('.section-fullpage').length;
 
-						return false;
-					} else {
-						scrollTimer = 0;
+                $background.height(allSections * 100 + 'vh');
+            },
+            afterResponsive: function (isResponsive) {
+                if(isResponsive) {
+                    $('html, body').removeAttr('style');
+                };
+            },
+            navigation: false,
+            onLeave: function (index, nextIndex, direction) {
+                if($services.index() === (index - 1)) {
+                    if(scrollTimer < 5) {
+                        scrollTimer++;
 
-						animatedElements(nextIndex);
-					};
-				} else {
-					scrollTimer = 0;
+                        return false;
+                    } else {
+                        scrollTimer = 0;
 
-					animatedElements(nextIndex);
-				};
-			},
-			responsiveWidth: 1280,
-			scrollOverflow: true,
-			scrollOverflowOptions: {
-				snapThreshold: 0.1
-			},
-			sectionSelector: '.section-fullpage',
-			slideSelector: '.slide-fullpage'
-		});
-	};
+                        animatedElements(nextIndex);
+                    };
+                } else {
+                    scrollTimer = 0;
 
-	$servicesToggle.on('click', function(event) {
-		event.preventDefault();
+                    animatedElements(nextIndex);
+                };
+            },
+            responsiveWidth: 1280,
+            scrollOverflow: true,
+            scrollOverflowOptions: {
+                snapThreshold: 0.1
+            },
+            sectionSelector: '.section-fullpage',
+            slideSelector: '.slide-fullpage'
+        });
+    };
 
-		$servicesNav.toggleClass('open');
-	});
+    $servicesToggle.on('click', function (event) {
+        event.preventDefault();
 
-	$doc.on('click touchstart', function(event) {
-		var $target = $(event.target);
+        $servicesNav.toggleClass('open');
+    });
 
-		if ( !$target.hasClass('nav-services') && !$target.parents('.nav-services').length ) {
-			$servicesNav.removeClass('open');
-		}
-	});
+    $doc.on('click touchstart', function (event) {
+        var $target = $(event.target);
 
-	// Handle form elements's filled states
-	$('.field, .select, .textarea').each(function() {
-		setFormElementFilledState($(this));
-	});
+        if(!$target.hasClass('nav-services') && !$target.parents('.nav-services').length) {
+            $servicesNav.removeClass('open');
+        }
+    });
 
-	$('.field, .select, .textarea').on('input change keyup', function(event) {
-		setFormElementFilledState($(this));
-	});
+    // Handle form elements's filled states
+    $('.field, .select, .textarea').each(function () {
+        setFormElementFilledState($(this));
+    });
 
-	$win
-		.on('load scroll', function() {
-			// Reassign variables' values
-			winW = $win.width();
-			winH = $win.height();
-			winO = $win.scrollTop();
+    $('.field, .select, .textarea').on('input change keyup', function (event) {
+        setFormElementFilledState($(this));
+    });
 
-			// Animate various elements on scroll
-			$animated.each(function() {
-				var $element = $(this);
+    $win
+        .on('load scroll', function () {
+            // Reassign variables' values
+            winW = $win.width();
+            winH = $win.height();
+            winO = $win.scrollTop();
 
-				if ( $element.hasClass(animatedClass) ) {
-					return;
-				};
+            // Animate various elements on scroll
+            $animated.each(function () {
+                var $element = $(this);
 
-				if ( winO + winH * 0.8 > $element.offset().top ) {
-					$element.addClass(animatedClass);
-				};
-			});
+                if($element.hasClass(animatedClass)) {
+                    return;
+                };
 
-			$header.toggleClass(scrolledClass, winO > $header.outerHeight());
-		})
-		.on('resize', function() {
-			// Reassign variables' values
-			winW = $win.width();
-			winH = $win.height();
-		});
+                if(winO + winH * 0.8 > $element.offset().top) {
+                    $element.addClass(animatedClass);
+                };
+            });
+
+            $header.toggleClass(scrolledClass, winO > $header.outerHeight());
+        })
+        .on('resize', function () {
+            // Reassign variables' values
+            winW = $win.width();
+            winH = $win.height();
+        });
 
 })(jQuery, window, document);
