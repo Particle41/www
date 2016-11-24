@@ -8,7 +8,7 @@
 .header.scrolled { padding: 15px 0; background-color: color(#0a2f4e a(50%)); }
 .header.scrolled ~ .nav-toggle { top: 11px; }
 
-.header .logo { width: 177px; height: 46px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; }
+.header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; }
 .header .shell { min-height: 46px; padding-top: 0; }
 
 .header-inner { padding: 0 80px; }
@@ -26,6 +26,6 @@ $breakpoint-tablet-portrait {
 }
 
 $breakpoint-mobile {
-	.header .logo { width: 150px; height: 39px; }
+	.header .logo { width: 150px; height: 16px; }
 	.header .shell { min-height: 39px; }
 }
