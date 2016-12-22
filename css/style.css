@@ -1,4 +1,4 @@
-/*
+/* 
 	Table of Contents
 
 	     01. Icons ------------------------------------
@@ -383,6 +383,16 @@ textarea,
 	h2 { font-size: 45px; line-height: 1.1; }
 }
 
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
 @media ( max-width: 767px ) {
 	body { background-position: 70% 0; background-size: 300% auto; }
 
@@ -711,7 +721,7 @@ textarea,
 @media ( max-width: 767px ) {
 	.blog-item br,
 	.blog-item-icon { display: none; }
-
+	
 	.blog-item h3 { font-size: 24px; padding: 0; }
 }
 
@@ -882,7 +892,7 @@ textarea,
 }
 
 @media ( max-width: 1023px ) {
-	.feature { padding: 0 10px 42px; }
+	.feature { padding: 0 10px 42px; }	
 	.feature-title { font-size: 24px; }
 }
 
@@ -1006,7 +1016,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 	.form-contact .form-content,
 	.form-contact .form-aside { width: auto; float: none; }
-
+	
 	.form-contact .form-head { padding-bottom: 40px; }
 	.form-contact .form-aside { padding-top: 100px; }
 }
@@ -1306,7 +1316,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 	.nav-services .current { width: 100%; display: block; }
 	.nav-services .current a { border-bottom: none; }
-
+	
 	.nav-services .nav-services-toggle { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 2; border-bottom: 2px solid #3c85c0; cursor: pointer; }
 
 	.nav-services .nav-services-toggle:before { width: 25px; height: 24px; border: 1px solid rgba(143, 205, 255, 0.9); margin-top: -12px; border-radius: 50%; }
@@ -1490,7 +1500,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 	.process.animated-in .process-icon { -ms-transform: scale(1); transform: scale(1); }
 	.process.animated-in .process-content { opacity: 1; visibility: visible; }
-
+	
 	.process.animated-in .process-item:nth-child(2) { margin-top: 117px; }
 	.process.animated-in .process-item:nth-child(3) { margin-top: -70px; }
 	.process.animated-in .process-item:nth-child(4) { margin-top: 52px; }
@@ -1511,7 +1521,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.process .process-item { font-size: 16px; line-height: 1.75; text-align: left; width: 50%; padding-bottom: 41.283%; }
 
 	.process-item:first-child .process-icon { top: 0; }
-
+	
 	.process-item:nth-child(2) .process-icon,
 	.process-item:nth-child(3) .process-icon,
 	.process-item:nth-child(4) .process-icon { top: 9px; left: 128px; }
@@ -1589,7 +1599,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.section-intro .section-images img:nth-child(3) { -ms-transform: translate(10%, -85%) rotate(80deg) skew(0deg) scale(.55); transform: translate(10%, -85%) rotate(80deg) skew(0deg) scale(.55); transition-delay: .9s; }
 
 	.section-intro .section-images img.animated-in { -ms-transform: translate(0%, 0%) rotate(0deg) skew(0deg) scale(1); transform: translate(0%, 0%) rotate(0deg) skew(0deg) scale(1); }
-
+	
 	.section-intro .section-content { transition: opacity .7s ease 1.75s, visibility .7s ease 1.5s; }
 	.section-intro .section-bubble { -ms-transform: translateY(100%) scale(0); transform: translateY(100%) scale(0); transition: transform .5s ease 1.2s; }
 
@@ -1601,7 +1611,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.section-intro { font-size: 0; line-height: 0; padding: 0; }
 	.section-intro .section-content { font-size: 16px; line-height: 1.75; width: 50%; float: none; display: inline-block; vertical-align: middle; }
 	.section-intro .section-content-inner { max-width: 560px; }
-
+	
 	.section-intro .section-images { width: 50%; display: inline-block; vertical-align: middle; position: relative; }
 	.section-intro .section-images img { max-width: 70%; position: relative; }
 	.section-intro .section-images img:first-child { top: 0; left: 0; margin: -300px 0 0 300px; }
@@ -1617,7 +1627,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 1023px ) {
 	.section-intro { padding: 50px 0; }
-
+	
 	.section-intro .section-images { display: none; }
 	.section-intro .section-bubble { left: 0; margin: 0; }
 
@@ -1971,7 +1981,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 @media ( max-width: 1600px ) {
 	.section-service-smart-data { padding-bottom: 80px; }
 	.section-service-smart-data .section-inner { margin-bottom: 100px; }
-
+	
 	.section-service-automation .section-head,
 	.section-service-deployment .section-head { margin-bottom: 100px; }
 }
@@ -1990,7 +2000,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 @media ( max-width: 1279px ) {
 	.section-service { padding: 90px 0 80px; }
 	.section-service br { display: none; }
-
+	
 	.section-service-managed { padding: 90px 0 30px; }
 	.section-service-managed .section-inner { margin-bottom: 50px; }
 	.section-service-managed .section-content { padding-top: 100px; }
@@ -2043,7 +2053,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.section-service-primary .section-inner { margin-bottom: 30px; }
 
 	.section-service-primary .section-image { margin: 0; }
-
+	
 	.section-service-managed .section-image { padding: 0; }
 	.section-service-managed .section-image-right + .section-content { padding: 0; }
 
@@ -2078,7 +2088,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.section-case-studies { padding: 0; }
-	.section-case-studies .section-head { padding-bottom: 50px; }
+	.section-case-studies .section-head { padding-bottom: 50px; }	
 }
 
 /* ------------------------------------------------------------ *\
@@ -2131,7 +2141,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 1023px ) {
 	.section-project { padding: 0 0 20px; }
-
+	
 	.section-project .section-head { padding-bottom: 80px; }
 	.section-project .section-block { padding-bottom: 50px; }
 
@@ -2267,7 +2277,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 @media ( min-width: 1024px ) {
 	.service-image { -ms-transform: scale(0); transform: scale(0); -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; transition: transform .35s ease .7s; }
 	.service-content { opacity: 0; visibility: hidden; -ms-transform: translateY(-25%); transform: translateY(-25%); transition: opacity .35s ease .5s, visibility .35s ease .5s, transform .35s ease .5s; }
-
+	
 	.service.animated-in .service-image { -ms-transform: scale(1); transform: scale(1); }
 	.service.animated-in .service-content { opacity: 1; visibility: visible; -ms-transform: translateY(0%); transform: translateY(0%); }
 }
@@ -2300,7 +2310,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.service-4 .service-image { top: -50px; right: 70px; }
 
 	.service-5 { width: 48%; height: 0; padding: 160px 120px 31.7%; margin:-2% 0 0; }
-
+	
 	.service-6 { width: 56%; height: 0; padding: 180px 150px 37.7%; margin: -31% 0 0 -7%; }
 	.service-6 .service-image { top: -120px; right: 100px; }
 }
@@ -2469,7 +2479,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 1600px ) {
 	.fp-enabled .section-container { max-width: 1440px; }
-
+	
 	.fp-enabled .section-container,
 	.fp-enabled .section-intro .section-container,
 	.fp-enabled .section-services .section-container,
@@ -2490,8 +2500,8 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 	.fp-enabled .process-item:first-child .process-icon { top: -60px; left: 0; }
 
-	.fp-enabled .process-item:nth-child(2) .process-icon,
-	.fp-enabled .process-item:nth-child(3) .process-icon,
+	.fp-enabled .process-item:nth-child(2) .process-icon, 
+	.fp-enabled .process-item:nth-child(3) .process-icon, 
 	.fp-enabled .process-item:nth-child(4) .process-icon { top: -15px; left: 35px; }
 
 	.fp-enabled .process-content { width: 70%; }

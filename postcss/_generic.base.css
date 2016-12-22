@@ -75,6 +75,16 @@ $breakpoint-tablet-portrait {
 	h2 { font-size: 45px; line-height: 1.1; }
 }
 
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
 $breakpoint-mobile {
 	body { background-position: 70% 0; background-size: 300% auto; }
 
