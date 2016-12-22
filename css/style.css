@@ -486,7 +486,8 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.header .logo { width: 150px; height: 16px; }
+
+	.header .logo { width: 200px; height: 22px; }
 	.header .shell { min-height: 39px; }
 }
 
