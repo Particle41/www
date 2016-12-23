@@ -26,6 +26,6 @@ $breakpoint-tablet-portrait {
 }
 
 $breakpoint-mobile {
-	.header .logo { width: 200px; height: 22px; }
+	.header .logo { width: 270px; height: 30px; right: 150px; position: absolute; top: 35px; }
 	.header .shell { min-height: 39px; }
 }
