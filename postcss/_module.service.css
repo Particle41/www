@@ -142,7 +142,8 @@ $breakpoint-mobile {
 	.service-3:before { width: 794px; height: 855px; top: -304px; left: 4px; border: 1px solid color($color-line a(30%)); }
 	.service-3:after { content: ''; width: 639px; height: 639px; top: -18px; right: -34px; background-color: $color-circle; }
 
-	.service-4 { display: none; }
+	.service-4 { order: 6; z-index: 5; }
+	.service-4:before { width: 677px; height: 677px; top: -39px; left: 76px; border: 1px solid rgba(71, 152, 218, 0.3); }
 
 	.service-5 { order: 5; }
 	.service-5:before { width: 585px; height: 585px; top: -354px; left: -468px; border: 1px solid color($color-line a(30%)); }
@@ -164,9 +165,11 @@ $breakpoint-mobile {
 	.service-content .btn-primary { letter-spacing: 0.18em; }
 
 	.services .service-1 .service-image,
+	.services .service-4 .service-image,
 	.services .service-6 .service-image { right: -24px; left: auto; }
 
 	.services .service-1 .service-content h3,
+	.services .service-4 .service-content h3,
 	.services .service-6 .service-content h3 { padding-right: 117px; padding-left: 0; }
 
 	.services .service-2 .service-image,
