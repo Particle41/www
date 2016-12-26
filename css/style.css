@@ -383,16 +383,6 @@ textarea,
 	h2 { font-size: 45px; line-height: 1.1; }
 }
 
-@media screen and (max-width: 667px) {
-    body {
-        overflow-x: hidden !important;
-    }
-    .container {
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-}
-
 @media ( max-width: 767px ) {
 	body { background-position: 70% 0; background-size: 300% auto; }
 
@@ -462,7 +452,7 @@ textarea,
 
 @media ( max-width: 767px ) {
 	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; margin-left: -463px; }
+	.footer:before { width: 926px; height: 926px; position: fixed; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -496,7 +486,7 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.header .logo { width: 270px; height: 30px; right: 150px; position: absolute; top: 35px; }
+	.header .logo { width: 270px; height: 30px; position: relative; top: 7px; right: 12%;}
 	.header .shell { min-height: 39px; }
 }
 
@@ -1225,7 +1215,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.nav-secondary { padding-right: 40px; }
+	.nav-secondary { padding-right: 32px; position: relative; top: -27px;}
 }
 
 /* ------------------------------------------------------------ *\
