@@ -1626,17 +1626,13 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.section-intro { padding: 33px 0 42px; z-index: 2; left: -25px;}
+	.section-intro { padding: 33px 0 42px; z-index: 2; }
 
 	.section-intro .section-content h1 { margin-bottom: 32px; }
 	.section-intro .section-content p { letter-spacing: 1px; padding-left: 3px; margin-bottom: 17px; }
 	.section-intro .section-content p br { display: none; }
 
 	.section-intro .section-bubble { top: 255px; left: -110px; }
-}
-
-@media ( max-width: 374px ) {
-	.section-intro { padding: 33px 0 42px; z-index: 2; left: -12px;}
 }
 
 /* ------------------------------------------------------------ *\
