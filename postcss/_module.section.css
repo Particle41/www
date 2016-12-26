@@ -63,7 +63,7 @@ $breakpoint-tablet-portrait {
 }
 
 $breakpoint-mobile {
-	.section-intro { padding: 33px 0 42px; z-index: 2; }
+	.section-intro { padding: 33px 0 42px; z-index: 2; left: -25px;}
 
 	.section-intro .section-content h1 { margin-bottom: 32px; }
 	.section-intro .section-content p { letter-spacing: 1px; padding-left: 3px; margin-bottom: 17px; }
@@ -71,6 +71,10 @@ $breakpoint-mobile {
 
 	.section-intro .section-bubble { top: 255px; left: -110px; }
 }
+
+$breakpoint-mobile-small {
+	.section-intro { padding: 33px 0 42px; z-index: 2; left: -12px;}
+}	
 
 /* ------------------------------------------------------------ *\
 	Section Products
