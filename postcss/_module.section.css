@@ -70,6 +70,11 @@ $breakpoint-mobile {
 	.section-intro .section-content p br { display: none; }
 
 	.section-intro .section-bubble { top: 255px; left: -110px; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-intro .section-container { margin-left: -25px;}
+	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
 }
 
 /* ------------------------------------------------------------ *\
