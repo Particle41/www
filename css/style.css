@@ -486,8 +486,10 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.header .logo { width: 270px; height: 30px; position: relative; top: 7px; right: 12%;}
+	.header { height: 70px; }
+	.header .logo { width: 270px; height: 30px; position: relative; top: 3px; right: 12%;}
 	.header .shell { min-height: 39px; }
+	.header.scrolled { padding: 18px 0; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1215,7 +1217,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.nav-secondary { padding-right: 32px; position: relative; top: -27px;}
+	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
 }
 
 /* ------------------------------------------------------------ *\

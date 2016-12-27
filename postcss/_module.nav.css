@@ -64,7 +64,7 @@ $breakpoint-large-desktop {
 }
 
 $breakpoint-mobile {
-	.nav-secondary { padding-right: 32px; position: relative; top: -27px;}
+	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
 }
 
 /* ------------------------------------------------------------ *\
