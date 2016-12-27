@@ -85,15 +85,6 @@
         smartSpeed: 600
     });
 
-    // Stop autoplay top carousel when scrolling is on and next slide request triggered manualy.
-    $taglines.on('changed.owl.carousel', function(event) {
-        winO = $win.scrollTop();
-        if(winO > $header.outerHeight()){
-            console.log('Event changed and i will stop autoplay');
-            $taglines.trigger('play.owl.autoplay');
-            $taglines.trigger('stop.owl.autoplay');
-        }
-    });
 
     // Fullpage Initialization
     if(winW > 1279) {
@@ -180,15 +171,6 @@
             });
 
             $header.toggleClass(scrolledClass, winO > $header.outerHeight());
-
-            // Stop autoplay top carousel when scrolling is on.
-            if(winO > $header.outerHeight()){
-                $taglines.trigger('play.owl.autoplay');
-                $taglines.trigger('stop.owl.autoplay');
-            }
-            else {
-                $taglines.trigger('play.owl.autoplay');   
-            }            
         })
         .on('resize', function () {
             // Reassign variables' values
