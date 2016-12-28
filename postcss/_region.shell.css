@@ -17,9 +17,9 @@ $breakpoint-small-desktop {
 }
 
 $breakpoint-mobile {
-	.shell { padding-top: 102px; padding-right: 25px; padding-left: 25px; }
+	.shell { padding-top: 45px; padding-right: 25px; padding-left: 25px; }
 }
 
 $breakpoint-mobile-small {
-	.shell { padding-right: 10px; padding-left: 10px; }
+	.shell { padding-top: 45px; padding-right: 10px; padding-left: 10px; }
 }

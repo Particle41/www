@@ -5,7 +5,7 @@
 .header { position: fixed; top: 0; right: 0; left: 0; z-index: 8; padding: 55px 0; background-color: color(#0a2f4e a(0%)); transition: background-color .45s ease, padding .45s ease; }
 .header:after { @extend clearfix; }
 
-.header.scrolled { padding: 15px 0; background-color: color(#0a2f4e a(50%)); }
+.header.scrolled { padding: 15px 0; background-color: color(#0a2f4e a(85%)); }
 .header.scrolled ~ .nav-toggle { top: 11px; }
 
 .header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; }
@@ -26,6 +26,8 @@ $breakpoint-tablet-portrait {
 }
 
 $breakpoint-mobile {
-	.header .logo { width: 270px; height: 30px; right: 150px; position: absolute; top: 35px; }
+	.header { height: 70px; }
+	.header .logo { width: 270px; height: 30px; position: relative; top: 3px; right: 12%;}
 	.header .shell { min-height: 39px; }
+	.header.scrolled { padding: 18px 0; }
 }
