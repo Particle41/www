@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<ol class="blog-items">
+
+	{% for post in site.posts %}
+		<li class="blog-item">
+			<span class="blog-item-icon">
+				<i class="ico-pencil"></i>
+			</span>
+
+			<h3>
+				<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+			</h3>
+
+			<h6 class="blog-item-meta">
+				- <a href="{{ post.url | relative_url }}">{{ post.author }}</a> 
+				| <a href="{{ post.url | relative_url }}">{{ post.date | date: "%-d %B, %Y" }}</a>
+			</h6>
+			<p> {{ post.excerpt }} </p>
+			<a href="{{ post.url | relative_url }}" class="btn btn-primary">Learn More</a>
+		</li><!-- /.blog-item -->								
+	{% endfor %}
+
+</ol><!-- /.blog-items -->

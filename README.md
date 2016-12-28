@@ -25,3 +25,13 @@ $ `gulp` (use GitBash on Windows / Terminal on OSX) in the directory of the proj
 ## Build the app
 
 $ `gulp build` (use GitBash on Windows / Terminal on OSX) in the directory of the project
+
+
+## Build the blog through jekyll
+Goto blog directory then execute folling command.
+
+$ `jekyll build` (use GitBash on Windows / Terminal on OSX) in the blog directory of the project.
+
+After building the blog, we need to copy the generated blog post to build folder of project.
+
+$ `gulp jekyll_blog`
