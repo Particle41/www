@@ -17,6 +17,6 @@ $breakpoint-animations {
 }
 
 $breakpoint-mobile {
-	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; position: fixed; }
+	.footer { padding: 52px 0 52px; }
+	.footer:before { width: 926px; height: 0px; position: fixed; }
 }
