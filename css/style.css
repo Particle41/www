@@ -435,9 +435,9 @@ textarea,
 	Footer
 \* ------------------------------------------------------------ */
 
-.footer { text-align: center; position: relative; padding: 94px 0 74px; }
+.footer { text-align: center; position: relative; padding: 70px 0 70px; }
 
-.footer:before { content: ''; width: 1200px; height: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: rgba(7, 43, 72, 0.2); border-radius: 50%; }
+.footer:before { content: ''; width: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: rgba(7, 43, 72, 0.2); border-radius: 50%; }
 
 .footer .copyright { font-size: 12px; line-height: 1.75; color: rgba(255, 255, 255, 0.5); }
 
@@ -451,8 +451,8 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; position: fixed; }
+	.footer { padding: 50px 0 50px; }
+	.footer:before { width: 926px; position: fixed; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -543,6 +543,8 @@ textarea,
 
 @media ( max-width: 767px ) {
 	.wrapper { background-size: 200% auto; }
+	/*.wrapper-secondary .container:before { position: relative; }*/
+	.wrapper-secondary .container .shell { padding-top: 102px; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1800,7 +1802,12 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.section-testimonials { padding-bottom: 96px; }
 	.section-testimonials .owl-dots { padding-left: 102px; }
 
-	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 56px; }
+	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-testimonials .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-testimonials .section-inner-content { margin-left: -25px; }
+	.section-testimonials .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
 }
 
 /* ------------------------------------------------------------ *\

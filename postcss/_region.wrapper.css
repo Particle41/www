@@ -22,4 +22,6 @@
 
 $breakpoint-mobile {
 	.wrapper { background-size: 200% auto; }
+	/*.wrapper-secondary .container:before { position: relative; }*/
+	.wrapper-secondary .container .shell { padding-top: 102px; }
 }

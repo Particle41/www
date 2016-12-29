@@ -2,8 +2,8 @@
 	Footer
 \* ------------------------------------------------------------ */
 
-.footer { text-align: center; position: relative; padding: 94px 0 74px; }
-.footer:before { content: ''; width: 1200px; height: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: color($color-base a(20%)); border-radius: 50%; }
+.footer { text-align: center; position: relative; padding: 70px 0 70px; }
+.footer:before { content: ''; width: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: color($color-base a(20%)); border-radius: 50%; }
 
 .footer .copyright { font-size: 12px; line-height: 1.75; color: color($color-white a(50%)); }
 
@@ -17,6 +17,6 @@ $breakpoint-animations {
 }
 
 $breakpoint-mobile {
-	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; position: fixed; }
+	.footer { padding: 50px 0 50px; }
+	.footer:before { width: 926px; position: fixed; }
 }

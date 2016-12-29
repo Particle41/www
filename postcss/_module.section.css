@@ -220,7 +220,12 @@ $breakpoint-mobile {
 	.section-testimonials { padding-bottom: 96px; }
 	.section-testimonials .owl-dots { padding-left: 102px; }
 
-	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 56px; }
+	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-testimonials .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-testimonials .section-inner-content { margin-left: -25px; }
+	.section-testimonials .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
 }
 
 /* ------------------------------------------------------------ *\
