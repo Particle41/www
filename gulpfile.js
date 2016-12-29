@@ -1116,33 +1116,8 @@ gulp.task('build:wp', function() {
     runSequence('images:resize-sprite-source', 'css:lazy-rules', 'css:import-modules', 'css:compile', 'images:sprites');
 });
 
-
-// gulp.task('jekyll', function(cb){
-//     // return gulp.src('./blog/').pipe(exec('jekyll build',{})).pipe(gulp.dest('./blog/'));
-
-//     gulp.src('./blog/', { cwd: './blog' }).pipe(exec('jekyll build', {}));
-
-//     // exec('jekyll build', function(err) {
-//     //     if (err) return cb(err); // return error
-//     //     cb(); // finished task
-//     // });
-// });
-
-
-gulp.task('jekyll', function() {
-    console.log('Inside the log ' + config.paths.source.blog);
-    var jekylBuild = spawn('jekyl',['build'],{ cwd: './blog' });
-    jekylBuild.stdout.on('data', (data) => {
-        console.log('list '+ data);
-    });
-
-    jekylBuild.on('error', (err) => {
-        console.log('process failed ' + err);
-    });
-});
-
-
-gulp.task('jekyll_blog', function(){
+// publish blog, it will copy blog/_site contents to build directory.
+gulp.task('blog:publish', function(){
     return gulp.src(['./blog/_site/**'])
                 .pipe(gulp.dest('build/')); 
 });

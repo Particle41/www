@@ -127,6 +127,31 @@
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
+<h3 id="section-with-image">Section with image</h3>
+
+<p>We can include image in markdown using</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	![Image title.]<span class="o">(</span>/path/to/image.jpg<span class="o">)</span>
+	or 
+	Simmply write html code like
+	&lt;img <span class="nv">src</span><span class="o">=</span><span class="s2">"/path/to/image.jpg"</span> <span class="nv">style</span><span class="o">=</span><span class="s2">"width: 200px; height: 200px;"</span> /&gt;
+	Or
+	can be like 
+	![Nice image.]<span class="o">(</span>/css/images/temp/photo3.jpg<span class="o">){</span>: <span class="nv">height</span><span class="o">=</span><span class="s2">"200"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"200"</span><span class="o">}</span> </code></pre></figure>
+
+<p><img src="/css/images/temp/photo3.jpg" alt="Nice image." /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/css/images/temp/photo3.jpg" alt="Nice image." style="width: 300px; height: 150px;" /></td>
+      <td>Now wanted to add some text around the image. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitaCon ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This text will not be around the image and it will be in the next line of image.</p>
+
 	</div><!-- /.article-body -->
 </article><!-- /.article -->
 
