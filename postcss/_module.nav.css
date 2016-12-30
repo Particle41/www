@@ -67,6 +67,10 @@ $breakpoint-mobile {
 	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
 }
 
+$breakpoint-mobile-landscape{
+	.nav-secondary { padding-right: 32px; position: relative; top: 0px; }
+}
+
 /* ------------------------------------------------------------ *\
 	Nav Visible
 \* ------------------------------------------------------------ */
