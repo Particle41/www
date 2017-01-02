@@ -170,7 +170,8 @@
                 };
             });
 
-            $header.toggleClass(scrolledClass, winO > $header.outerHeight());
+            // $header.toggleClass(scrolledClass, winO > $header.outerHeight());
+            $header.toggleClass(scrolledClass, winO > 10);
         })
         .on('resize', function () {
             // Reassign variables' values

@@ -22,3 +22,4 @@ $breakpoint-medium-desktop:         @media ( max-width: 1440px );
 $breakpoint-large-desktop:          @media ( max-width: 1600px );
 $breakpoint-animations:             @media ( min-width: 1024px );
 $retina:                            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi);
+$breakpoint-mobile-landscape:				@media only screen and (max-device-width : 767px) and (orientation : landscape);
