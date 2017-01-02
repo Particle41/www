@@ -64,11 +64,11 @@ $breakpoint-large-desktop {
 }
 
 $breakpoint-mobile {
-	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
+	.nav-secondary { position: relative; }
 }
 
 $breakpoint-mobile-landscape{
-	.nav-secondary { padding-right: 32px; position: relative; top: 0px; }
+	.nav-secondary { position: relative; }
 }
 
 /* ------------------------------------------------------------ *\

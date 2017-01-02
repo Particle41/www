@@ -53,13 +53,19 @@ $breakpoint-medium-desktop {
 }
 
 $breakpoint-tablet-portrait {
-	.section-intro { padding: 50px 0; }
+	/*.section-intro { padding: 50px 0; }*/
 	
 	.section-intro .section-images { display: none; }
 	.section-intro .section-bubble { left: 0; margin: 0; }
 
 	.section-intro .section-content { width: auto; display: block; }
-	.section-intro .section-content-inner { max-width: 450px; margin: auto; }
+	.section-intro .section-content-inner { margin: auto; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-intro .section-container { margin-left: -2%; }
+	.section-intro .section-content-inner { max-width: initial; margin: auto; }
+	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }	
 }
 
 $breakpoint-mobile {
