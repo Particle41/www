@@ -29,7 +29,7 @@
 <body>
 	<div class="wrapper wrapper-secondary">
 		<header class="header">
-
+			<div class="shell">
 				<div class="header-inner">
 					<a href="home.html" class="logo"></a>
 
@@ -41,7 +41,7 @@
 						</ul>
 					</nav><!-- /.nav-secondary -->
 				</div><!-- /.header-inner -->
-
+			</div><!-- /.shell -->
 		</header><!-- /.header -->
 
 		<button type="button" class="nav-toggle">
@@ -85,7 +85,7 @@
 				</ul>
 			</li>
 
-			<li class="current">
+			<li>
 				<a href="projects.html">Projects</a>
 			</li>
 
@@ -109,50 +109,90 @@
 <div class="container">
 	<div class="shell">
 		<div class="main main-primary">
-			<section class="section-project">
-				<header class="section-head">
-					<h2>Data Sharing <strong>with Management Portal and Dashboard</strong></h2>
+			<div class="form-job">
+				<form method="POST" id="job-form">
+					<div class="form-head">
+						<h1>Apply</h1>
 
-					<p>Particle41 partnered with Über Software to build a versatile application with broad distribution.</p>
-				</header>
-				<!-- /.section-head -->
-
-				<div class="section-block">
-					<div class="section-image">
-						<figure>
-							<img src="css/images/temp/project3.png" alt="" />
-						</figure>
+						<p>Tell us about yourself, and why you're interested in working with Particle41!</p>
 					</div>
-					<!-- /.section-image -->
+					<!-- /.form-head -->
+					<div class="form-body">
+						<div class="form-content">
 
-					<div class="section-entry">
-						<p>Created a robust application that implemented a facade over ad serving tags and then distributed to over 500 publishers. Later implemented 8 data sharing relationships. This project involved highly compatible javascript, super lightweight code and
-							memcache. A management portal and dashboard accompany the core product.</p>
+							<div class="form-row">
+								<input type="text" class="field" name="firstName" id="firstName" value="" required />
+
+								<label for="name" class="form-label">First Name <span class="form-asterisk">*</span></label>
+							</div>
+							<!-- /.form-row -->
+
+							<div class="form-row">
+								<input type="text" class="field" name="lastName" id="lastName" value="" required />
+
+								<label for="name" class="form-label">Last Name <span class="form-asterisk">*</span></label>
+							</div>
+							<!-- /.form-row -->
+
+							<div class="form-row">
+								<input type="email" class="field" name="email" id="email" value="" required />
+
+								<label for="email" class="form-label">Email <span class="form-asterisk">*</span></label>
+							</div>
+							<!-- /.form-row -->
+
+							<div class="form-row">
+								<input type="tel" class="field" name="phone" id="phone" value="" required />
+
+								<label for="phone" class="form-label">Phone</label>
+							</div>
+							<!-- /.form-row -->
+
+							<div class="form-row">
+								<!-- Cover Letter Uploader -->
+								<!-- Resume Uploader -->
+							<!-- /.form-row -->
+
+							<div class="form-actions">
+								<button type="submit" class="btn btn-primary">Submit Application</button>
+							</div>
+							<!-- /.form-actions -->
+						</div>
+						<!-- /.form-content -->
+
+						<div class="form-aside">
+							<ul class="contacts">
+								<li class="contacts-item contacts-item-small">
+									<i class="ico-smartphone"></i>
+
+									<a href="tel:4692690780">(469) 269-0780</a>
+								</li>
+								<!-- /.contacts-item contacts-item-small -->
+
+								<li class="contacts-item contacts-item-medium">
+									<i class="ico-envelope"></i>
+
+									<a href="mailto:sales@particle41.com" target="_blank">careers@particle41.com</a>
+								</li>
+								<!-- /.contacts-item contacts-item-medium -->
+
+								<li class="contacts-item contacts-item-large">
+									<i class="ico-marker"></i>
+
+									<address>
+												<a href="https://www.google.com/maps/place/8113+Lonesome+Spur+Trail,+McKinney,+TX+75070/@33.158283,-96.7219427,17z/data=!3m1!4b1!4m5!3m4!1s0x864c16704dbb39c5:0xb84afd63b7c8b5e9!8m2!3d33.158283!4d-96.719754" target="_blank">8113 Lonesome Spur Trl McKinney, TX 75070</a>
+											</address>
+								</li>
+								<!-- /.contacts-item contacts-item-large -->
+							</ul>
+							<!-- /.contacts -->
+						</div>
+						<!-- /.form-aside -->
 					</div>
-					<!-- /.section-entry -->
-				</div>
-				<!-- /.section-block -->
-
-				<!-- <div class="section-body">
-							<h3>Understanding <strong>the Data</strong></h3>
-
-							<p>It takes a lot of understanding to get data in the right shape so that you can use visualization as part of data analysis. For example, if the data comes from social media content, you need to know who the user is in a general sense – such as a customer using a particular set of products – and understand what it is you’re trying to visualize out of the data. Without some sort of context, visualization tools are likely to be of less value to the user.</p>
-
-							<hr />
-
-							<h3>Addressing <strong>Data Quality</strong></h3>
-
-							<p>Even if you can find and analyze data quickly and put it in the proper context for the audience that will be consuming the information, the value of data for decision-making purposes will be jeopardized if the data is not accurate or timely. This is a challenge with any data analysis, but when considering the volumes of information involved in big data projects, it becomes even more pronounced. Again, data visualization will only prove to be a valuable tool if the data quality is assured. To address this issue, companies need to have a data governance or information management process in place to ensure the data is clean. It’s always best to have a proactive method to address data quality issues so problems won’t arise later.</p>
-
-							<hr />
-
-							<h3>Displaying <strong>Meaningful Results</strong></h3>
-
-							<p>Plotting points on a graph for analysis becomes difficult when dealing with extremely large amounts of information or a variety of categories of information. For example, imagine you have 10 billion rows of retail SKU data that you’re trying to compare. The user trying to view 10 billion plots on the screen will have a hard time seeing so many data points.</p>
-						</div> -->
-				<!-- /.section-body -->
-			</section>
-			<!-- /.section-project -->
+					<!-- /.form-body -->
+				</form>
+			</div>
+			<!-- /.form-apply -->
 
 							</div><!-- /.main -->
 
