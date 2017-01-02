@@ -18,5 +18,5 @@ $breakpoint-animations {
 
 $breakpoint-mobile {
 	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; margin-left: -463px; }
+	.footer:before { width: 926px; height: 926px; position: fixed; }
 }
