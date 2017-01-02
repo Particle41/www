@@ -452,7 +452,7 @@ textarea,
 
 @media ( max-width: 767px ) {
 	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; margin-left: -463px; }
+	.footer:before { width: 926px; height: 926px; position: fixed; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -463,7 +463,7 @@ textarea,
 
 .header:after { }
 
-.header.scrolled { padding: 15px 0; background-color: rgba(10, 47, 78, 0.5); }
+.header.scrolled { padding: 15px 0; background-color: rgba(10, 47, 78, 0.85); }
 
 .header.scrolled ~ .nav-toggle { top: 11px; }
 
@@ -486,8 +486,10 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.header .logo { width: 200px; height: 22px; }
+	.header { height: 70px; }
+	.header .logo { width: 270px; height: 30px; position: relative; top: 3px; right: 12%;}
 	.header .shell { min-height: 39px; }
+	.header.scrolled { padding: 18px 0; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -509,11 +511,11 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.shell { padding-top: 102px; padding-right: 25px; padding-left: 25px; }
+	.shell { padding-top: 45px; padding-right: 25px; padding-left: 25px; }
 }
 
 @media ( max-width: 374px ) {
-	.shell { padding-right: 10px; padding-left: 10px; }
+	.shell { padding-top: 45px; padding-right: 10px; padding-left: 10px; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1215,7 +1217,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.nav-secondary { padding-right: 40px; }
+	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
 }
 
 /* ------------------------------------------------------------ *\
@@ -1626,13 +1628,18 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.section-intro { padding: 33px 0 42px; }
+	.section-intro { padding: 33px 0 42px; z-index: 2; }
 
 	.section-intro .section-content h1 { margin-bottom: 32px; }
 	.section-intro .section-content p { letter-spacing: 1px; padding-left: 3px; margin-bottom: 17px; }
 	.section-intro .section-content p br { display: none; }
 
 	.section-intro .section-bubble { top: 255px; left: -110px; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-intro .section-container { margin-left: -25px;}
+	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -2358,7 +2365,8 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.service-3:before { width: 794px; height: 855px; top: -304px; left: 4px; border: 1px solid rgba(71, 152, 218, 0.3); }
 	.service-3:after { content: ''; width: 639px; height: 639px; top: -18px; right: -34px; background-color: #0a3252; }
 
-	.service-4 { display: none; }
+	.service-4 { -ms-flex-order: 6; order: 6; z-index: 5; }
+	.service-4:before { width: 677px; height: 677px; top: -39px; left: 76px; border: 1px solid rgba(71, 152, 218, 0.3); }
 
 	.service-5 { -ms-flex-order: 5; order: 5; }
 	.service-5:before { width: 585px; height: 585px; top: -354px; left: -468px; border: 1px solid rgba(71, 152, 218, 0.3); }
@@ -2380,14 +2388,16 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.service-content .btn-primary { letter-spacing: 0.18em; }
 
 	.services .service-1 .service-image,
-	.services .service-6 .service-image { right: -64px; left: auto; }
+	.services .service-4 .service-image,
+	.services .service-6 .service-image { right: -24px; left: auto; }
 
 	.services .service-1 .service-content h3,
+	.services .service-4 .service-content h3,
 	.services .service-6 .service-content h3 { padding-right: 117px; padding-left: 0; }
 
 	.services .service-2 .service-image,
 	.services .service-3 .service-image,
-	.services .service-5 .service-image { right: auto; left: -63px; }
+	.services .service-5 .service-image { right: auto; left: -24px; }
 
 	.services .service-3 { padding-top: 122px; margin-top: -19px; }
 	.services .service-5 { padding-top: 123px; margin-top: 0; }

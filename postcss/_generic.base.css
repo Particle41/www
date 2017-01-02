@@ -75,6 +75,7 @@ $breakpoint-tablet-portrait {
 	h2 { font-size: 45px; line-height: 1.1; }
 }
 
+
 $breakpoint-mobile {
 	body { background-position: 70% 0; background-size: 300% auto; }
 
