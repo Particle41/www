@@ -77,13 +77,14 @@
     // About taglines fader
     $taglines.owlCarousel({
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 5000,
         dots: false,
         items: 1,
         loop: true,
         nav: false,
-        smartSpeed: 2000
+        smartSpeed: 600
     });
+
 
     // Fullpage Initialization
     if(winW > 1279) {
