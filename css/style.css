@@ -1218,6 +1218,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
+
 }
 
 /* ------------------------------------------------------------ *\
@@ -1640,6 +1641,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
 	.section-intro .section-container { margin-left: -25px;}
 	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
+
 }
 
 /* ------------------------------------------------------------ *\
