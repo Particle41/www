@@ -25,7 +25,7 @@ $breakpoint-mobile {
 	Nav
 \* ------------------------------------------------------------ */
 
-.nav { visibility: hidden; font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
+.nav { visibility: hidden; font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; transition: z-index .35s ease, background-color .35s ease; }
 .nav a { display: inline-block; padding-right: 33px; border-bottom: 2px solid transparent; }
 .nav li { padding: 5px 0 3px; }
 .nav li ul { padding: 15px 0; }
@@ -54,7 +54,7 @@ $breakpoint-mobile {
 	Nav Secondary
 \* ------------------------------------------------------------ */
 
-.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary { float: right; padding-right: 80px; transition: none;}
 .nav-secondary li { float: left; }
 .nav-secondary a { color: color($color-white a(70%)); display: block; padding: 7px 8px; }
 .nav-secondary a:hover { color: $color-white; text-decoration: none; }
