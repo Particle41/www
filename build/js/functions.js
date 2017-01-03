@@ -87,7 +87,7 @@
 
 
     // Fullpage Initialization
-    if(winW > 1279) {
+    if(winW > 1679) {
         $fullpage.fullpage({
             afterRender: function () {
                 var allSections = $(this).find('.section-fullpage').length;

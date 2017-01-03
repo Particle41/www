@@ -1158,7 +1158,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav Toggle
 \* ------------------------------------------------------------ */
 
-.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: 50%; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; transition: top .45s ease; }
+.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: auto; right: 70px; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; transition: top .45s ease; }
 
 .nav-toggle span { width: 20px; height: 3px; display: block; position: relative; top: 0px; left: 0px; margin: 0 auto 4px; background-color: #fff; -ms-transform: rotate(0deg); transform: rotate(0deg); transition: all .35s ease; }
 
@@ -1215,7 +1215,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav Secondary
 \* ------------------------------------------------------------ */
 
-.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary { float: right; padding-right: 40px; }
 
 .nav-secondary li { float: left; }
 
@@ -1233,7 +1233,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape){
 	.nav-secondary { position: relative; }
-
 }
 
 /* ------------------------------------------------------------ *\
@@ -1823,7 +1822,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.section-testimonials { padding-bottom: 96px; }
-	.section-testimonials .owl-dots { padding-left: 102px; }
+	.section-testimonials .owl-dots { padding-left: 40%; }
 
 	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
 
@@ -1835,7 +1834,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape) {
 	.section-testimonials .owl-dots { padding-left: 44%; }
-
 }
 
 /* ------------------------------------------------------------ *\

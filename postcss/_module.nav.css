@@ -2,7 +2,7 @@
 	Nav Toggle
 \* ------------------------------------------------------------ */
 
-.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: 50%; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; @extend appearance; transition: top .45s ease; }
+.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: auto; right: 70px; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; @extend appearance; transition: top .45s ease; }
 .nav-toggle span { width: 20px; height: 3px; display: block; position: relative; top: 0px; left: 0px; margin: 0 auto 4px; background-color: $color-white; transform: rotate(0deg); transition: all .35s ease; }
 
 $breakpoint-large-desktop {
@@ -54,7 +54,7 @@ $breakpoint-mobile {
 	Nav Secondary
 \* ------------------------------------------------------------ */
 
-.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary { float: right; padding-right: 40px; }
 .nav-secondary li { float: left; }
 .nav-secondary a { color: color($color-white a(70%)); display: block; padding: 7px 8px; }
 .nav-secondary a:hover { color: $color-white; text-decoration: none; }
