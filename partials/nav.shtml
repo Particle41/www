@@ -1,5 +1,6 @@
 <nav class="nav">
   <div class="nav-container">
+    <p>The current page is: </p>
     <ul>
       <li>
         <a href="services.html">Services</a>
