@@ -1182,7 +1182,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav
 \* ------------------------------------------------------------ */
 
-.nav { font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
+.nav { visibility: hidden; font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
 
 .nav a { display: inline-block; padding-right: 33px; border-bottom: 2px solid transparent; }
 
@@ -1233,7 +1233,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape){
 	.nav-secondary { position: relative; }
-
 }
 
 /* ------------------------------------------------------------ *\
@@ -1250,7 +1249,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 .nav-visible .header { background-color: transparent; }
 
-.nav-visible .nav { z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(7, 43, 72, 0.7); }
+.nav-visible .nav { visibility: visible; z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(7, 43, 72, 0.7); }
 
 .nav-visible .nav-container { -ms-transform: translateX(0%); transform: translateX(0%); }
 
@@ -1823,7 +1822,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.section-testimonials { padding-bottom: 96px; }
-	.section-testimonials .owl-dots { padding-left: 102px; }
+	.section-testimonials .owl-dots { padding-left: 40%; }
 
 	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
 
@@ -1835,7 +1834,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape) {
 	.section-testimonials .owl-dots { padding-left: 44%; }
-
 }
 
 /* ------------------------------------------------------------ *\
