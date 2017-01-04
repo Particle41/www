@@ -117,7 +117,7 @@
                     animatedElements(nextIndex);
                 };
             },
-            responsiveWidth: 1280,
+            responsiveWidth: 1680,
             scrollOverflow: true,
             scrollOverflowOptions: {
                 snapThreshold: 0.1
