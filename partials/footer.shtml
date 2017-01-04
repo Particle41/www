@@ -51,6 +51,7 @@
 	<!-- App JS -->
 	<script src="js/functions.js"></script>
 	<script src="js/contact.js"></script>
+	<script src="js/apply.js"></script>
 
 </body>
 </html>

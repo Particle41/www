@@ -1233,7 +1233,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape){
 	.nav-secondary { position: relative; }
-
 }
 
 /* ------------------------------------------------------------ *\
@@ -1823,7 +1822,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.section-testimonials { padding-bottom: 96px; }
-	.section-testimonials .owl-dots { padding-left: 102px; }
+	.section-testimonials .owl-dots { padding-left: 40%; }
 
 	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
 
@@ -1835,7 +1834,6 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media only screen and (max-device-width : 767px) and (orientation : landscape) {
 	.section-testimonials .owl-dots { padding-left: 44%; }
-
 }
 
 /* ------------------------------------------------------------ *\
