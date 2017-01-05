@@ -542,7 +542,6 @@ textarea,
 .wrapper-secondary .container:before { content: ''; width: 1200px; height: 1200px; opacity: .2; position: absolute; top: 0; left: 50%; z-index: -1; margin-left: -600px; background-color: #082d4a; border-radius: 50%; }
 
 @media ( min-width: 1601px ) {
-	.wrapper-secondary .header-inner { padding-right: 54px; }
 	.wrapper-secondary .nav-toggle { margin-left: 665px; }
 }
 
