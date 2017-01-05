@@ -717,10 +717,12 @@ textarea,
 }
 
 @media ( max-width: 1023px ) {
-	.blog-item { width: auto; float: none; }
+	.blog-item { width: auto; float: none; padding-left: 2%; }
+	.blog-item-icon { width: 80px; height: 80px; top: -30px; margin-left: 12px; }
 }
 
 @media ( max-width: 767px ) {
+	.blog-item { padding-left: 2%; }
 	.blog-item br,
 	.blog-item-icon { display: none; }
 	
