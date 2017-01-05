@@ -27,10 +27,12 @@ $breakpoint-small-desktop {
 }
 
 $breakpoint-tablet-portrait {
-	.blog-item { width: auto; float: none; }
+	.blog-item { width: auto; float: none; padding-left: 2%; }
+	.blog-item-icon { width: 80px; height: 80px; top: -30px; margin-left: 12px; }
 }
 
 $breakpoint-mobile {
+	.blog-item { padding-left: 2%; }
 	.blog-item br,
 	.blog-item-icon { display: none; }
 	

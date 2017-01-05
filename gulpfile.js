@@ -30,7 +30,8 @@ var config = {
         source: {
             css     : './postcss',
             js      : './js',
-            sprite  : './css/images/sprite'
+            sprite  : './css/images/sprite',
+            blog    : './blog'
         },
         temp : {
             css     : './.temp'
@@ -202,6 +203,9 @@ var plumber             = require('gulp-plumber');
 var yargs               = require('yargs');
 var postcssAPI          = require('postcss');
 var postcss             = require('gulp-postcss');
+var exec                = require('child_process').exec;
+var spawn               = require('child_process').spawn;
+var globStream         = require('glob-stream');
 
 var envVars = yargs.argv;
 
@@ -688,7 +692,7 @@ var modules = {
         };
 
         var taskBuildCopy = function() {
-            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html'])
+            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html', '!blog/**'])
                 .pipe(copy('build/'));
         };
 
@@ -699,7 +703,7 @@ var modules = {
         };
 
         var taskBuildInclude = function() {
-            return gulp.src(['**/*.html', '!build/**/*.html'])
+            return gulp.src(['**/*.html', '!build/**/*.html', '!blog/**'])
                 .pipe(modules.html.compileSSI);
         };
 
@@ -1111,6 +1115,13 @@ gulp.task('build:wp', function() {
 
     runSequence('images:resize-sprite-source', 'css:lazy-rules', 'css:import-modules', 'css:compile', 'images:sprites');
 });
+
+// publish blog, it will copy blog/_site contents to build directory.
+gulp.task('blog:publish', function(){
+    return gulp.src(['./blog/_site/**'])
+                .pipe(gulp.dest('build/')); 
+});
+
 
 // Defaut Task
 gulp.task('default', ['serve']);

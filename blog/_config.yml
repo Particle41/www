@@ -1,0 +1,11 @@
+# Dependencies
+markdown: kramdown
+
+# Setup
+title: Particle41
+email: info@particle41.com
+description: > # this means to ignore newlines until "baseurl:"
+  Custom Development for Aggressive Entrepreneurs.
+
+# Stuff
+exclude: ["Gemfile"]

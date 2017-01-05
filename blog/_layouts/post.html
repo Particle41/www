@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="article">
+	<header class="article-head">
+		<div class="article-title">
+			<h3>{{ page.title }}</h3>
+
+			<h6 class="article-meta">- {{ page.date | date: "%-d %B, %Y" }} </h6><!-- /.article-meta -->
+		</div><!-- /.article-title -->
+
+		{% if page.image_url %}
+			<figure class="article-image">
+				<img src="/css/images/temp/article.jpg" alt="" />
+			</figure><!-- /.article-image -->
+		{% endif %}
+	</header><!-- /.article-head -->
+
+	<div class="article-body">
+		{{ content }}
+	</div><!-- /.article-body -->
+</article><!-- /.article -->
