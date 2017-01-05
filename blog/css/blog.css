@@ -1,0 +1,12 @@
+body { font-family: 'Arimo', sans-serif; font-size: 16px; line-height: 1.75; color: #fff; font-weight: 400; font-style: normal; text-transform: none; text-decoration: none; letter-spacing: 0; word-spacing: 0; min-width: 320px; background: none; }
+.wrapper { background: none; min-height: 50%; }
+.wrapper-secondary { background: none; }
+.header { background: #072b48 url(/css/images/bgt.jpg) no-repeat 100% 0; }
+.blog-container { color: #000000; }
+.section-blog h1,
+h2,
+h3,
+h4,
+h5 { color: #8fcdff; }
+
+.section-blog h2 strong { color: #000000; }

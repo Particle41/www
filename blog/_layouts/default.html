@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+  <body>
+   {% include header.html %}
+   {% include nav.html %}
+	<div class="blog-container">
+
+
+		<section class="section-blog">
+			<header class="section-head">
+				<h2>Notes <strong>from Our Team</strong></h2>
+
+				<p>Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.</p>
+			</header><!-- /.section-head -->
+		</section>	
+	
+		{{ content }}
+	
+	</div><!-- /.container -->  
+		{% include footer.html %}
+  </body>
+</html>
+
+
+
