@@ -87,7 +87,7 @@
 
 
     // Fullpage Initialization
-    if(winW > 1279) {
+    if(winW > 1679) {
         $fullpage.fullpage({
             afterRender: function () {
                 var allSections = $(this).find('.section-fullpage').length;
@@ -117,7 +117,7 @@
                     animatedElements(nextIndex);
                 };
             },
-            responsiveWidth: 1280,
+            responsiveWidth: 1680,
             scrollOverflow: true,
             scrollOverflowOptions: {
                 snapThreshold: 0.1
@@ -170,7 +170,8 @@
                 };
             });
 
-            $header.toggleClass(scrolledClass, winO > $header.outerHeight());
+            // $header.toggleClass(scrolledClass, winO > $header.outerHeight());
+            $header.toggleClass(scrolledClass, winO > 10);
         })
         .on('resize', function () {
             // Reassign variables' values

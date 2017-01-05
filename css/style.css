@@ -435,9 +435,9 @@ textarea,
 	Footer
 \* ------------------------------------------------------------ */
 
-.footer { text-align: center; position: relative; padding: 94px 0 74px; }
+.footer { text-align: center; position: relative; padding: 70px 0 70px; }
 
-.footer:before { content: ''; width: 1200px; height: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: rgba(7, 43, 72, 0.2); border-radius: 50%; }
+.footer:before { content: ''; width: 1200px; display: block; position: absolute; top: 0; left: 50%; z-index: 1; margin-left: -600px; background-color: rgba(7, 43, 72, 0.2); border-radius: 50%; }
 
 .footer .copyright { font-size: 12px; line-height: 1.75; color: rgba(255, 255, 255, 0.5); }
 
@@ -451,8 +451,8 @@ textarea,
 }
 
 @media ( max-width: 767px ) {
-	.footer { padding: 62px 0 52px; }
-	.footer:before { width: 926px; height: 926px; position: fixed; }
+	.footer { padding: 50px 0 50px; }
+	.footer:before { width: 926px; position: fixed; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -467,7 +467,7 @@ textarea,
 
 .header.scrolled ~ .nav-toggle { top: 11px; }
 
-.header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; }
+.header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; position: fixed; margin-left: -3%; margin-top: 3px; }
 
 .header .shell { min-height: 46px; padding-top: 0; }
 
@@ -483,13 +483,22 @@ textarea,
 
 @media ( max-width: 1023px ) {
 	.header { padding: 30px 0; }
+	.header .logo { margin-left: -5%; }
 }
 
 @media ( max-width: 767px ) {
 	.header { height: 70px; }
-	.header .logo { width: 270px; height: 30px; position: relative; top: 3px; right: 12%;}
+	.header .logo { width: 270px; height: 30px; position: fixed; margin-left: -5%; }
 	.header .shell { min-height: 39px; }
 	.header.scrolled { padding: 18px 0; }
+}
+
+@media ( max-width: 374px ) {
+	.header .logo { margin-left: -9%; }
+}
+
+@media only screen and (max-device-width : 767px) and (orientation : landscape) {
+	.header .logo { margin-left: -3%; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -533,7 +542,6 @@ textarea,
 .wrapper-secondary .container:before { content: ''; width: 1200px; height: 1200px; opacity: .2; position: absolute; top: 0; left: 50%; z-index: -1; margin-left: -600px; background-color: #082d4a; border-radius: 50%; }
 
 @media ( min-width: 1601px ) {
-	.wrapper-secondary .header-inner { padding-right: 54px; }
 	.wrapper-secondary .nav-toggle { margin-left: 665px; }
 }
 
@@ -543,6 +551,8 @@ textarea,
 
 @media ( max-width: 767px ) {
 	.wrapper { background-size: 200% auto; }
+	/*.wrapper-secondary .container:before { position: relative; }*/
+	.wrapper-secondary .container .shell { padding-top: 102px; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1147,7 +1157,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav Toggle
 \* ------------------------------------------------------------ */
 
-.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: 50%; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; transition: top .45s ease; }
+.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: auto; right: 70px; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; transition: top .45s ease; }
 
 .nav-toggle span { width: 20px; height: 3px; display: block; position: relative; top: 0px; left: 0px; margin: 0 auto 4px; background-color: #fff; -ms-transform: rotate(0deg); transform: rotate(0deg); transition: all .35s ease; }
 
@@ -1171,7 +1181,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav
 \* ------------------------------------------------------------ */
 
-.nav { font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
+.nav { visibility: hidden; font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; transition: z-index .35s ease, background-color .35s ease; }
 
 .nav a { display: inline-block; padding-right: 33px; border-bottom: 2px solid transparent; }
 
@@ -1204,7 +1214,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 	Nav Secondary
 \* ------------------------------------------------------------ */
 
-.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary { float: right; padding-right: 40px; }
 
 .nav-secondary li { float: left; }
 
@@ -1217,8 +1227,11 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 767px ) {
-	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
+	.nav-secondary { position: relative; }
+}
 
+@media only screen and (max-device-width : 767px) and (orientation : landscape){
+	.nav-secondary { position: relative; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1235,7 +1248,7 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 .nav-visible .header { background-color: transparent; }
 
-.nav-visible .nav { z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(7, 43, 72, 0.7); }
+.nav-visible .nav { visibility: visible; z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(7, 43, 72, 0.7); }
 
 .nav-visible .nav-container { -ms-transform: translateX(0%); transform: translateX(0%); }
 
@@ -1510,24 +1523,27 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 1440px ) {
+	/*.section-container { max-width: 1200px; }*/
+	.process .process-item { width: 25%; padding-bottom: 17%; margin-left: 0; margin-right: 0; }
+
+	.process-item:first-child .process-icon { top: -60px; left: 0; }
+	.process-item:nth-child(2) .process-icon, 
+	.process-item:nth-child(3) .process-icon, 
+	.process-item:nth-child(4) .process-icon { top: -15px; left: 35px; }
+
+	.process-content { width: 70%; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+}
+
+@media ( max-width: 1279px ) {
 	.process { font-size: 0; line-height: 0; text-align: center; }
 	.process .process-item { font-size: 16px; line-height: 1.75; text-align: left; width: 50%; padding-bottom: 41.283%; }
 
-	.process-item:first-child .process-icon { top: 0; }
-	
+	.process-item:first-child .process-icon { top: 0; }	
 	.process-item:nth-child(2) .process-icon,
 	.process-item:nth-child(3) .process-icon,
 	.process-item:nth-child(4) .process-icon { top: 9px; left: 128px; }
 
 	.process-content { width: 50%; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-}
-
-@media ( max-width: 1279px ) {
-	.process-item:first-child .process-icon { top: -15px; }
-
-	.process-item:nth-child(2) .process-icon,
-	.process-item:nth-child(3) .process-icon,
-	.process-item:nth-child(4) .process-icon { top: -6px; }
 }
 
 @media ( max-width: 1023px ) {
@@ -1619,13 +1635,19 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 }
 
 @media ( max-width: 1023px ) {
-	.section-intro { padding: 50px 0; }
+	/*.section-intro { padding: 50px 0; }*/
 	
 	.section-intro .section-images { display: none; }
 	.section-intro .section-bubble { left: 0; margin: 0; }
 
 	.section-intro .section-content { width: auto; display: block; }
-	.section-intro .section-content-inner { max-width: 450px; margin: auto; }
+	.section-intro .section-content-inner { margin: auto; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-intro .section-container { margin-left: -2%; }
+	.section-intro .section-content-inner { max-width: initial; margin: auto; }
+	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }	
 }
 
 @media ( max-width: 767px ) {
@@ -1639,9 +1661,13 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 	/* bellow code is to make carousel swipe effect from edge to edge. */
 	.section-intro .owl-carousel .owl-stage-outer { overflow: visible; }
-	.section-intro .section-container { margin-left: -25px;}
+	.section-intro .section-container { margin-left: -7%; }
+	.section-intro .section-content-inner { max-width: initial; margin: auto; }
 	.section-intro .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
+}
 
+@media only screen and (max-device-width : 767px) and (orientation : landscape) {
+	.section-intro .section-container { margin-left: -4%; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -1798,9 +1824,18 @@ input:-webkit-autofill { -webkit-text-fill-color: #05233c; border-color: #fff; b
 
 @media ( max-width: 767px ) {
 	.section-testimonials { padding-bottom: 96px; }
-	.section-testimonials .owl-dots { padding-left: 102px; }
+	.section-testimonials .owl-dots { padding-left: 40%; }
 
-	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 56px; }
+	.section-testimonials .section-content h2 { padding-left: 0; margin-bottom: 15px; }
+
+	/* bellow code is to make carousel swipe effect from edge to edge. */
+	.section-testimonials .owl-carousel .owl-stage-outer { overflow: visible; }
+	.section-testimonials .section-inner-content { margin-left: -25px; }
+	.section-testimonials .owl-stage-outer .owl-stage .owl-item { padding-left: 25px; padding-right: 25px; }
+}
+
+@media only screen and (max-device-width : 767px) and (orientation : landscape) {
+	.section-testimonials .owl-dots { padding-left: 44%; }
 }
 
 /* ------------------------------------------------------------ *\

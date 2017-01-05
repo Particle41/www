@@ -2,7 +2,7 @@
 	Nav Toggle
 \* ------------------------------------------------------------ */
 
-.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: 50%; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; @extend appearance; transition: top .45s ease; }
+.nav-toggle { width: 50px; height: 50px; display: block; position: fixed; top: 50px; left: auto; right: 70px; z-index: 11; padding-top: 4px; border: 0; margin-left: 638px; overflow: hidden; background: none; border-radius: 0; box-shadow: none; @extend appearance; transition: top .45s ease; }
 .nav-toggle span { width: 20px; height: 3px; display: block; position: relative; top: 0px; left: 0px; margin: 0 auto 4px; background-color: $color-white; transform: rotate(0deg); transition: all .35s ease; }
 
 $breakpoint-large-desktop {
@@ -25,7 +25,7 @@ $breakpoint-mobile {
 	Nav
 \* ------------------------------------------------------------ */
 
-.nav { font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; z-index: -1; transition: z-index .35s ease, background-color .35s ease; }
+.nav { visibility: hidden; font-size: 40px; line-height: 1.55; width: 100%; height: 100.01%; position: fixed; top: 0; right: 0; transition: z-index .35s ease, background-color .35s ease; }
 .nav a { display: inline-block; padding-right: 33px; border-bottom: 2px solid transparent; }
 .nav li { padding: 5px 0 3px; }
 .nav li ul { padding: 15px 0; }
@@ -54,7 +54,7 @@ $breakpoint-mobile {
 	Nav Secondary
 \* ------------------------------------------------------------ */
 
-.nav-secondary { float: right; padding-right: 80px; }
+.nav-secondary { float: right; padding-right: 40px; }
 .nav-secondary li { float: left; }
 .nav-secondary a { color: color($color-white a(70%)); display: block; padding: 7px 8px; }
 .nav-secondary a:hover { color: $color-white; text-decoration: none; }
@@ -64,7 +64,11 @@ $breakpoint-large-desktop {
 }
 
 $breakpoint-mobile {
-	.nav-secondary { padding-right: 32px; position: relative; top: -32px;}
+	.nav-secondary { position: relative; }
+}
+
+$breakpoint-mobile-landscape{
+	.nav-secondary { position: relative; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -77,7 +81,7 @@ $breakpoint-mobile {
 .nav-visible .wrapper-secondary { background-image: url(images/wrapper-bg2.jpg); background-size:cover; height: auto;}
 .nav-visible .header { background-color: transparent; }
 
-.nav-visible .nav { z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: color($color-base a(70%)); }
+.nav-visible .nav { visibility: visible; z-index: 9; overflow-x: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch; background-color: color($color-base a(70%)); }
 .nav-visible .nav-container { transform: translateX(0%); }
 
 .nav-visible .nav-toggle { margin-right: 17px; }

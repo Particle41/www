@@ -8,7 +8,7 @@
 .header.scrolled { padding: 15px 0; background-color: color(#0a2f4e a(85%)); }
 .header.scrolled ~ .nav-toggle { top: 11px; }
 
-.header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; }
+.header .logo { width: 372px; height: 41px; float: left; background: url(images/logo@2x.png) no-repeat 0 0; background-size: 100% 100%; position: fixed; margin-left: -3%; margin-top: 3px; }
 .header .shell { min-height: 46px; padding-top: 0; }
 
 .header-inner { padding: 0 80px; }
@@ -23,11 +23,20 @@ $breakpoint-medium-desktop {
 
 $breakpoint-tablet-portrait {
 	.header { padding: 30px 0; }
+	.header .logo { margin-left: -5%; }
 }
 
 $breakpoint-mobile {
 	.header { height: 70px; }
-	.header .logo { width: 270px; height: 30px; position: relative; top: 3px; right: 12%;}
+	.header .logo { width: 270px; height: 30px; position: fixed; margin-left: -5%; }
 	.header .shell { min-height: 39px; }
 	.header.scrolled { padding: 18px 0; }
+}
+
+$breakpoint-mobile-small {
+	.header .logo { margin-left: -9%; }
+}
+
+$breakpoint-mobile-landscape {
+	.header .logo { margin-left: -3%; }
 }
