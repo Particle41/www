@@ -57,11 +57,92 @@
 <div class="container">
 	<div class="shell">
 		<div class="main main-primary">
+
+
+			<!-- BEGIN TEST CODE -->
+			<!-- BEGIN TEST CODE -->
+			<!-- BEGIN TEST CODE -->
+			<!-- BEGIN TEST CODE -->
+			<!-- BEGIN TEST CODE -->
+			<!-- BEGIN TEST CODE -->
+
+
+			<div class="test">
+				<p>Testing Uploads here!</p>
+				<p>Can we make this work?</p>
+				<input type="file" id="file-input">
+				<p id="status">Please select a file</p>
+				<img id="preview" src="/images/default.png">
+
+				<form method="POST" action="/save-details">
+					<input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png">
+					<input type="text" name="username" placeholder="Username"><br>
+					<input type="text" name="full-name" placeholder="Full name"><br><br>
+					<input type="submit" value="Update profile">
+				</form>
+			</div>
+			<script type="text/javascript">
+
+				/*Listener*/
+				(() => {
+					document.getElementById("file-input").onchange = () => {
+						const files = document.getElementById('file-input').files;
+						const file = files[0];
+						if (file == null) {
+							return alert('No file selected.');
+						}
+						getSignedRequest(file);
+					};
+				})();
+
+				/*getSignedRequest*/
+				function getSignedRequest(file) {
+					const xhr = new XMLHttpRequest();
+					xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+					xhr.onreadystatechange = () => {
+						if (xhr.readyState === 4) {
+							if (xhr.status === 200) {
+								const response = JSON.parse(xhr.responseText);
+								uploadFile(file, response.signedRequest, response.url);
+							} else {
+								alert('Could not get signed URL.');
+							}
+						}
+					};
+					xhr.send();
+				}
+				
+				/*uploadFile*/
+				function uploadFile(file, signedRequest, url) {
+					const xhr = new XMLHttpRequest();
+					xhr.open('PUT', signedRequest);
+					xhr.onreadystatechange = () => {
+						if (xhr.readyState === 4) {
+							if (xhr.status === 200) {
+								document.getElementById('preview').src = url;
+								document.getElementById('avatar-url').value = url;
+							} else {
+								alert('Could not upload file.');
+							}
+						}
+					};
+					xhr.send(file);
+				}
+			</script>
+
+
+			<!-- END TEST CODE -->
+			<!-- END TEST CODE -->
+			<!-- END TEST CODE -->
+			<!-- END TEST CODE -->
+			<!-- END TEST CODE -->
+			<!-- END TEST CODE -->
+
+
 			<div class="form-application">
 				<form method="POST" id="application-form">
 					<div class="form-head">
 						<h1>Apply</h1>
-
 						<p>Let's Start with your contact info:</p>
 					</div>
 					<!-- /.form-head -->
@@ -72,77 +153,81 @@
 								<input type="text" class="field" name="firstName" id="firstName" value="" required />
 
 								<label for="name" class="form-label">First Name <span class="form-asterisk">*</span></label>
-							</div><!-- /.form-row -->
+							</div>
+							<!-- /.form-row -->
 
 							<div class="form-row">
 								<input type="text" class="field" name="lastName" id="lastName" value="" required />
 
 								<label for="name" class="form-label">Last Name <span class="form-asterisk">*</span></label>
-							</div><!-- /.form-row -->
+							</div>
+							<!-- /.form-row -->
 
 							<div class="form-row">
 								<input type="email" class="field" name="email" id="email" value="" required />
 
 								<label for="email" class="form-label">Email <span class="form-asterisk">*</span></label>
-							</div><!-- /.form-row -->
+							</div>
+							<!-- /.form-row -->
 
 							<div class="form-row">
 								<input type="tel" class="field" name="phone" id="phone" value="" required />
 
 								<label for="phone" class="form-label">Phone</label>
-							</div><!-- /.form-row -->
+							</div>
+							<!-- /.form-row -->
 
 							<div class="form-row">
 								<p>Now tell us about yourself, and why you're interested in working with Particle41!</p>
 								<p>Upload a Cover Letter here.</p>
 								<!-- TODO Cover Letter Uploader -->
-							<!-- /.form-row -->
+								<!-- /.form-row -->
 
-							<div class="form-row">
-								<p>And now for the resume...</p>
-								<p>Upload your resume here.</p>
-								<!-- TODO Resume Uploader -->
-							<!-- /.form-row -->
+								<div class="form-row">
+									<p>And now for the resume...</p>
+									<p>Upload your resume here.</p>
+									<!-- TODO Resume Uploader -->
+									<!-- /.form-row -->
 
-							<div class="form-actions">
-								<button type="submit" class="btn btn-primary form-btn">Submit Application</button>
-							</div>
-							<!-- /.form-actions -->
-						</div>
-						<!-- /.form-content -->
+									<div class="form-actions">
+										<button type="submit" class="btn btn-primary form-btn">Submit Application</button>
+									</div>
+									<!-- /.form-actions -->
+								</div>
+								<!-- /.form-content -->
 
-						<div class="form-aside">
-							<ul class="contacts">
-								<li class="contacts-item contacts-item-small">
-									<i class="ico-smartphone"></i>
+								<div class="form-aside">
+									<ul class="contacts">
+										<li class="contacts-item contacts-item-small">
+											<i class="ico-smartphone"></i>
 
-									<a href="tel:4692690780">(469) 269-0780</a>
-								</li>
-								<!-- /.contacts-item contacts-item-small -->
+											<a href="tel:4692690780">(469) 269-0780</a>
+										</li>
+										<!-- /.contacts-item contacts-item-small -->
 
-								<li class="contacts-item contacts-item-medium">
-									<i class="ico-envelope"></i>
+										<li class="contacts-item contacts-item-medium">
+											<i class="ico-envelope"></i>
 
-									<a href="mailto:sales@particle41.com" target="_blank">careers@particle41.com</a>
-								</li>
-								<!-- /.contacts-item contacts-item-medium -->
+											<a href="mailto:sales@particle41.com" target="_blank">careers@particle41.com</a>
+										</li>
+										<!-- /.contacts-item contacts-item-medium -->
 
-								<li class="contacts-item contacts-item-large">
-									<i class="ico-marker"></i>
+										<li class="contacts-item contacts-item-large">
+											<i class="ico-marker"></i>
 
-									<address>
+											<address>
 												<a href="https://www.google.com/maps/place/8113+Lonesome+Spur+Trail,+McKinney,+TX+75070/@33.158283,-96.7219427,17z/data=!3m1!4b1!4m5!3m4!1s0x864c16704dbb39c5:0xb84afd63b7c8b5e9!8m2!3d33.158283!4d-96.719754" target="_blank">8113 Lonesome Spur Trl McKinney, TX 75070</a>
 											</address>
-								</li>
-								<!-- /.contacts-item contacts-item-large -->
-							</ul>
-							<!-- /.contacts -->
-						</div>
-						<!-- /.form-aside -->
-					</div>
-					<!-- /.form-body -->
+										</li>
+										<!-- /.contacts-item contacts-item-large -->
+									</ul>
+									<!-- /.contacts -->
+								</div>
+								<!-- /.form-aside -->
+							</div>
+							<!-- /.form-body -->
 				</form>
-			</div>
-			<!-- /.form-apply -->
+				</div>
+				<!-- /.form-apply -->
 
-			<!--#include virtual="partials/footer.shtml" -->
+				<!--#include virtual="partials/footer.shtml" -->
