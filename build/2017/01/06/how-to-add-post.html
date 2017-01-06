@@ -114,59 +114,59 @@
 	<div class="shell">
 		<div class="main main-primary">
 			<section class="section-blog">
-				<header class="section-head">
-	<h1>Notes <strong>from Our Team</strong></h1>
+				<div class="section-body">
+	<article class="article">
+		<header class="article-head">
+			<div class="article-title">
+				<h3>How to add blog post for particle41?</h3>
 
-	<p>Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.</p>
-</header><!-- /.section-head -->
-<div class="section-body">
-	<ol class="blog-items">
+				<h6 class="article-meta">- 6 January, 2017 </h6><!-- /.article-meta -->
+			</div><!-- /.article-title -->
 
-		
-			<li class="blog-item">
-				<span class="blog-item-icon">
-					<i class="ico-pencil"></i>
-				</span>
+			
+		</header><!-- /.article-head -->
 
-				<h3>
-					<a href="/2017/01/06/how-to-add-post.html">How to add blog post for particle41?</a>
-				</h3>
+		<div class="article-body">
+			<p>We are using jekyll to build our static blog contents. If you wish to know more about jekyll and want to explore it in details then please visit its <a href="http://jekyllrb.com/docs/home/">official url</a> there is good documentation available there.</p>
 
-				<h6 class="blog-item-meta">
-					- <a href="/2017/01/06/how-to-add-post.html">Hitesh Rawal</a> 
-					| <a href="/2017/01/06/how-to-add-post.html">6 January, 2017</a>
-				</h6>
-				<p> 
-				
-					Write a blog and publish on particle41 website using jekyll. 
-				 	
-				</p>
-				<a href="/2017/01/06/how-to-add-post.html" class="btn btn-primary">Learn More</a>
-			</li><!-- /.blog-item -->								
-		
-			<li class="blog-item">
-				<span class="blog-item-icon">
-					<i class="ico-pencil"></i>
-				</span>
+<p>To publish a blog post we have to follow three simple steps.</p>
 
-				<h3>
-					<a href="/2016/12/28/what-is-devops.html">What is DevOps and why do you need it?</a>
-				</h3>
+<ul>
+  <li>Write a blog</li>
+  <li>Build jekyll</li>
+  <li>Publish to website</li>
+</ul>
 
-				<h6 class="blog-item-meta">
-					- <a href="/2016/12/28/what-is-devops.html">Ben Johnson</a> 
-					| <a href="/2016/12/28/what-is-devops.html">28 December, 2016</a>
-				</h6>
-				<p> 
-				
-					The old paradigm in the IT industry was to split the development into two groups, the SoBware Development group and the OperaCons group. The soBware group was involved with wriCng code, implemenCng code, tesCng code and rewriCng code. 
-				 	
-				</p>
-				<a href="/2016/12/28/what-is-devops.html" class="btn btn-primary">Learn More</a>
-			</li><!-- /.blog-item -->								
-		
+<h3 id="write-a-blog">Write a blog</h3>
+<p>To start writing a blog you have to create a markdown(.md) file in <code class="highlighter-rouge">_post</code> directory. This is important that the file name should be in following format only.</p>
 
-	</ol><!-- /.blog-items -->
+<div class="highlighter-rouge"><pre class="highlight"><code> YEAR-MONTH-DAY-title.md
+</code></pre>
+</div>
+<p>for eg:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> 2017-01-05-how-to-write-p41-blog.md
+</code></pre>
+</div>
+
+<p>While writing a blog we have to keep in mind that this is the markdown file, so we have to follow markdown syntaxes. So that our contents or thoughts which we want to represent can be appear properly.
+There are lot of contents available on internet about markdonw syntax. Here I am adding one links for <a href="https://en.support.wordpress.com/markdown-quick-reference/">quick reference</a>.</p>
+
+<h3 id="build-jekyll">Build jekyll</h3>
+<p>Once the content is ready then we have to do <code class="highlighter-rouge">jekyll build</code> it will generate html file of our post. Make sure you will run this command from <code class="highlighter-rouge">_blog</code> directory.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	<span class="nv">$ </span><span class="nb">cd</span> ./blog
+	<span class="nv">$ </span>jekyll build</code></pre></figure>
+
+<h3 id="publish-to-website">Publish to website</h3>
+<p>Now all set and we want to publish this post, so we have to go to root directory i.e. <code class="highlighter-rouge">www</code> and execute gulp receipy.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	<span class="nv">$ </span><span class="nb">cd </span>www
+	<span class="nv">$ </span>gulp blog:publish</code></pre></figure>
+
+
+		</div><!-- /.article-body -->
+	</article><!-- /.article -->
 </div><!-- /.section-body -->
 			</section><!-- /.section-blog -->
 
