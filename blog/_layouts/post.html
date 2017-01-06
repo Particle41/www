@@ -4,16 +4,25 @@ layout: default
 <div class="section-body">
 	<article class="article">
 		<header class="article-head">
-			<div class="article-title">
-				<h3>{{ page.title }}</h3>
+			{% if page.image_url %}		
+				<div class="article-title">
+					<h2>{{ page.title }}</h2>
 
-				<h6 class="article-meta">- {{ page.date | date: "%-d %B, %Y" }} </h6><!-- /.article-meta -->
-			</div><!-- /.article-title -->
-
-			{% if page.image_url %}
+					<div class="article-meta">
+						- {{ page.author }} | {{ page.date | date: "%-d %B, %Y" }} 
+					</div><!-- /.article-meta -->
+				</div><!-- /.article-title -->
 				<figure class="article-image">
-					<img src="/css/images/temp/article.jpg" alt="" />
+					<img src="{{ page.image_url }}" alt="" />
 				</figure><!-- /.article-image -->
+			{% else %}
+				<div class="article-title-without-image">
+					<h2>{{ page.title }}</h3>
+
+					<div class="article-meta">
+						- {{ page.author }} | {{ page.date | date: "%-d %B, %Y" }} 
+					</div><!-- /.article-meta -->
+				</div><!-- /.article-title-without-image -->
 			{% endif %}
 		</header><!-- /.article-head -->
 

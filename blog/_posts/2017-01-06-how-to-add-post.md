@@ -7,29 +7,22 @@ description: "Write a blog and publish on particle41 website using jekyll."
 ---
 
 We are using jekyll to build our static blog contents. If you wish to know more about jekyll and want to explore it in details then please visit its [official url](http://jekyllrb.com/docs/home/) there is good documentation available there. 
-
 To publish a blog post we have to follow three simple steps.
-
- - Write a blog
- - Build jekyll
- - Publish to website
-
+* Write a blog
+* Build jekyll
+* Publish to website
 
 ### Write a blog
 To start writing a blog you have to create a markdown(.md) file in `_post` directory. This is important that the file name should be in following format only.
 
 ```
- YEAR-MONTH-DAY-title.md
-```
-for eg: 
-
-```
- 2017-01-05-how-to-write-p41-blog.md
+	YEAR-MONTH-DAY-title.md
+	for eg: 
+	2017-01-06-how-to-add-post.md
 ```
 
 While writing a blog we have to keep in mind that this is the markdown file, so we have to follow markdown syntaxes. So that our contents or thoughts which we want to represent can be appear properly.
-There are lot of contents available on internet about markdonw syntax. Here I am adding one links for [quick reference](https://en.support.wordpress.com/markdown-quick-reference/).
-
+There are lot of contents available on internet about markdonw syntax. Here I am adding one links for [quick reference](http://daringfireball.net/projects/markdown/syntax/).
 
 ### Build jekyll
 Once the content is ready then we have to do `jekyll build` it will generate html file of our post. Make sure you will run this command from `_blog` directory.

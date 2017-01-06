@@ -24,12 +24,11 @@ This team approach leads to better and more efficient communication between not 
 ### Why __you need DevOps?__
 
 There are many benefits of a DevOps approach. These include:
-
- - Continuous updating and deployment meaning getting your software to market faster.
- - Because everyone is working together, there is a lower failure rate.
- - Faster time to recovery when something does go wrong.
- - Less complex problems and a faster resolution due to instant communication.
- - Operating systems are more stable.
- - More time to add value, less time to fix and maintain.
+- Continuous updating and deployment meaning getting your software to market faster.
+- Because everyone is working together, there is a lower failure rate.
+- Faster time to recovery when something does go wrong.
+- Less complex problems and a faster resolution due to instant communication.
+- Operating systems are more stable.
+- More time to add value, less time to fix and maintain.
 
 At Particle41 we work as equal partners with your team and our partners to develop your new systems, upgrade your old ones, and continuously monitor them ensuring they work smoothly and are upgraded with as little disruption as possible. Where teams traditionally conducted releases monthly or weekly. We feel modern competition requires that changes or varying levels of complexity happen daily or hourly giving companies the ability to make changes as soon as they are approved.
