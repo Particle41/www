@@ -1,8 +1,9 @@
 /* 
 	Table of Contents
 
-	     01. Icons ------------------------------------
-	     02. Syntax Highlighter -----------------------
+	     01. Code Highlighter -------------------------
+	     02. Icons ------------------------------------
+	     03. Syntax Highlighter -----------------------
 	I.   Generic --------------------------------------
 	     01. Reset ------------------------------------
 	     02. Base -------------------------------------
@@ -72,6 +73,40 @@
 	     01. Fullpage Theme ---------------------------
 	     02. Owl Carousel theme -----------------------
  */
+
+/* ------------------------------------------------------------ *\
+    Code Highlighter
+\* ------------------------------------------------------------ */
+
+code {
+  font-size: 90%;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #144369;
+  padding: .25em .5em;
+  word-wrap: break-word;
+  border-radius: 3px;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  white-space: pre-line;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+.highlight { display: block; }
+
+.highlight pre { background-color: black;  }
 
 /* ------------------------------------------------------------ *\
 	Icons
@@ -151,12 +186,8 @@
 }
 
 /* ------------------------------------------------------------ *\
-  Syntax Highlighter
+    Syntax Highlighter
 \* ------------------------------------------------------------ */
-
-.highlight { display: block; }
-
-.highlight pre { background-color: black;  }
 
 .highlight table td { padding: 5px; }
 
@@ -409,6 +440,12 @@
   color: #f92672;
 }
 
+/*.highlighter-rouge {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold; 
+  background: #144369;
+}*/
+
 .shell:after,
 .clear:after,
 .header:after,
@@ -426,7 +463,8 @@
 .section-testimonials:after,
 .section-service .section-inner:after,
 .section-project .section-block:after,
-.services:after { content: ''; line-height: 0; display: table; clear: both; }
+.services:after { content: ''; line-height: 0; display: table; clear: both;
+}
 
 input[type="text"],
 input[type="password"],
@@ -445,15 +483,18 @@ input[type="color"],
 textarea,
 a[href^="tel"],
 .btn,
-.nav-toggle { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.nav-toggle { -webkit-appearance: none; -moz-appearance: none; appearance: none;
+}
 
-.notext { white-space: nowrap; text-indent: 100%; text-shadow: none; overflow: hidden; }
+.notext { white-space: nowrap; text-indent: 100%; text-shadow: none; overflow: hidden;
+}
 
 .list-clients img,
 .section-intro .section-images img,
 .section-monitoring .section-image img,
 .section-testimonials .section-image img,
-.service-image img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
+.service-image img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none;
+}
 
 /* ------------------------------------------------------------ *\
 	I.   Generic

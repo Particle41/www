@@ -15,11 +15,9 @@ To publish a blog post we have to follow three simple steps.
 ### Write a blog
 To start writing a blog you have to create a markdown(.md) file in `_post` directory. This is important that the file name should be in following format only.
 
-```
-	YEAR-MONTH-DAY-title.md
+`YEAR-MONTH-DAY-title.md`
 	for eg: 
-	2017-01-06-how-to-add-post.md
-```
+`2017-01-06-how-to-add-post.md`
 
 While writing a blog we have to keep in mind that this is the markdown file, so we have to follow markdown syntaxes. So that our contents or thoughts which we want to represent can be appear properly.
 There are lot of contents available on internet about markdonw syntax. Here I am adding one links for [quick reference](http://daringfireball.net/projects/markdown/syntax/).
@@ -39,4 +37,3 @@ Now all set and we want to publish this post, so we have to go to root directory
 	$ cd www
 	$ gulp blog:publish
 {% endhighlight %}
-
