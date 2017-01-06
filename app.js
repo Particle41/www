@@ -4,6 +4,7 @@ const express = require('express');
 const aws = require('aws-sdk');
 
 const app = express();
+require('dotenv').config();
 
 app.set('port', (process.env.PORT || 5000));
 
