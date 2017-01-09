@@ -92,7 +92,8 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
-  white-space: pre-line;
+  white-space: pre;
+  white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
 }
