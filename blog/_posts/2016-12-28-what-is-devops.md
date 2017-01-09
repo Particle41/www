@@ -2,7 +2,7 @@
 layout: post
 title:  "What is DevOps and why do you need it?"
 date:   2016-12-28
-author: 'Ben Johnson'
+author_github: benjohnson77
 image_url: "/css/images/temp/article.jpg"
 description: "The old paradigm in the IT industry was to split the development into two groups, the SoBware Development group and the OperaCons group. The soBware group was involved with wriCng code, implemenCng code, tesCng code and rewriCng code."
 ---

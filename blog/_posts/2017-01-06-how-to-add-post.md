@@ -2,12 +2,12 @@
 layout: post
 title:  "How to add blog post for particle41?"
 date:   2017-01-06
-author: 'Hitesh Rawal'
+author_github: hiteshrawal
 description: "Write a blog and publish on particle41 website using jekyll."
 ---
 
-We are using jekyll to build our static blog contents. If you wish to know more about jekyll and want to explore it in details then please visit its [official url](http://jekyllrb.com/docs/home/) there is good documentation available there. 
-To publish a blog post we have to follow three simple steps.
+We are using jekyll to build our static blog contents. If you wish to know more about jekyll and want to explore it in details then please visit its [official site](http://jekyllrb.com/docs/home/) it has good documentations. 
+To publish a blog post we just have to follow three simple steps.
 * Write a blog
 * Build jekyll
 * Publish to website

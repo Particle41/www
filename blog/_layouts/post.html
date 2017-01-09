@@ -9,7 +9,7 @@ layout: default
 					<h2>{{ page.title }}</h2>
 
 					<div class="article-meta">
-						- {{ page.author }} | {{ page.date | date: "%-d %B, %Y" }} 
+						- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
 					</div><!-- /.article-meta -->
 				</div><!-- /.article-title -->
 				<figure class="article-image">
@@ -20,7 +20,7 @@ layout: default
 					<h2>{{ page.title }}</h3>
 
 					<div class="article-meta">
-						- {{ page.author }} | {{ page.date | date: "%-d %B, %Y" }} 
+						- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
 					</div><!-- /.article-meta -->
 				</div><!-- /.article-title-without-image -->
 			{% endif %}
