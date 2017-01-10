@@ -117,48 +117,48 @@
 				<div class="section-body">
 	<article class="article">
 		<header class="article-head">
-					
-				<div class="article-title">
-					<h2>What is DevOps and why do you need it?</h2>
+			
+				<div class="article-title-without-image">
+					<h2>How to add blog post for particle41?</h3>
 
 					<div class="article-meta">
-						- Ben Johnson | 28 December, 2016 
+						- Hitesh Rawal | 6 January, 2017 
 					</div><!-- /.article-meta -->
-				</div><!-- /.article-title -->
-				<figure class="article-image">
-					<img src="/css/images/temp/article.jpg" alt="" />
-				</figure><!-- /.article-image -->
+				</div><!-- /.article-title-without-image -->
 			
 		</header><!-- /.article-head -->
 
 		<div class="article-body">
-			<h3 id="devops-explained">DevOps <strong>Explained</strong></h3>
-
-<p>The old paradigm in the IT industry was to split the development into two groups, the SoBware Development group and the OperaCons group. The soBware group was involved with wriCng code, implemenCng code, tesCng code and rewriCng code.</p>
-
-<p>Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.</p>
-
-<p>The old paradigm in the IT industry was to split the development into two groups, the Software Development group and the Operations group. The software group was involved with writing code, implementing code, testing code and rewriting code. The operations group was involved with the systems needed to run the software, including having enough processing power, security, and efficiency and keep them all running.</p>
-
-<p>While both teams may be in the same building, like Congress they are in different rooms and rarely talk. This means the development process is drawn out over a long period of time and requires a lot of back and forth between the two teams.</p>
-
-<p>DevOps brings all the players into one room (figuratively anyways) where one team is together for the entire lifecycle of the project. Each team member uses the same technologies, the same code, and the same principles making for a smoother, more consistent, process and mutual cooperation. There is a sense of empathy between the teams.</p>
-
-<p>This team approach leads to better and more efficient communication between not only the development and operations teams but the other teams in the organization.</p>
-
-<h3 id="why-you-need-devops">Why <strong>you need DevOps?</strong></h3>
-
-<p>There are many benefits of a DevOps approach. These include:</p>
+			<p>We are using jekyll to build our static blog contents. If you wish to know more about jekyll and want to explore it in details then please visit its <a href="http://jekyllrb.com/docs/home/">official site</a> it has good documentations. 
+To publish a blog post we just have to follow three simple steps.</p>
 <ul>
-  <li>Continuous updating and deployment meaning getting your software to market faster.</li>
-  <li>Because everyone is working together, there is a lower failure rate.</li>
-  <li>Faster time to recovery when something does go wrong.</li>
-  <li>Less complex problems and a faster resolution due to instant communication.</li>
-  <li>Operating systems are more stable.</li>
-  <li>More time to add value, less time to fix and maintain.</li>
+  <li>Write a blog</li>
+  <li>Build jekyll</li>
+  <li>Publish to website</li>
 </ul>
 
-<p>At Particle41 we work as equal partners with your team and our partners to develop your new systems, upgrade your old ones, and continuously monitor them ensuring they work smoothly and are upgraded with as little disruption as possible. Where teams traditionally conducted releases monthly or weekly. We feel modern competition requires that changes or varying levels of complexity happen daily or hourly giving companies the ability to make changes as soon as they are approved.</p>
+<h3 id="write-a-blog">Write a blog</h3>
+<p>To start writing a blog you have to create a markdown(.md) file in <code class="highlighter-rouge">_post</code> directory. This is important that the file name should be in following format only.</p>
+
+<p><code class="highlighter-rouge">YEAR-MONTH-DAY-title.md</code>
+	for eg: 
+<code class="highlighter-rouge">2017-01-06-how-to-add-post.md</code></p>
+
+<p>While writing a blog we have to keep in mind that this is the markdown file, so we have to follow markdown syntaxes. So that our contents or thoughts which we want to represent can be appear properly.
+There are lot of contents available on internet about markdonw syntax. Here I am adding one links for <a href="http://daringfireball.net/projects/markdown/syntax/">quick reference</a>.</p>
+
+<h3 id="build-jekyll">Build jekyll</h3>
+<p>Once the content is ready then we have to do <code class="highlighter-rouge">jekyll build</code> it will generate html file of our post. Make sure you will run this command from <code class="highlighter-rouge">_blog</code> directory.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	<span class="nv">$ </span><span class="nb">cd</span> ./blog
+	<span class="nv">$ </span>jekyll build</code></pre></figure>
+
+<h3 id="publish-to-website">Publish to website</h3>
+<p>Now all set and we want to publish this post, so we have to go to root directory i.e. <code class="highlighter-rouge">www</code> and execute gulp receipy.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	<span class="nv">$ </span><span class="nb">cd </span>www
+	<span class="nv">$ </span>gulp blog:publish</code></pre></figure>
+
 
 		</div><!-- /.article-body -->
 	</article><!-- /.article -->

@@ -1,9 +1,6 @@
 /* ------------------------------------------------------------ *\
-  Syntax Highlighter
+    Syntax Highlighter
 \* ------------------------------------------------------------ */
-
-.highlight { display: block; }
-.highlight pre { background-color: black;  }
 
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -192,3 +189,9 @@
 .highlight .o {
   color: #f92672;
 }
+
+/*.highlighter-rouge {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold; 
+  background: #144369;
+}*/
