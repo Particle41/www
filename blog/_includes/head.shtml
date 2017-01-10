@@ -3,7 +3,14 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Particle41 | Custom Development for Aggressive Entrepreneurs</title>
+	<title>
+	  {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+	</title>
+  <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.meta_description }} {% endif %}" />	
 
 		<!-- Google Analytics -->
 		<script>
