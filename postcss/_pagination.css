@@ -2,7 +2,7 @@
 		Blog Paginations
 \* ------------------------------------------------------------ */
 
-.pagination { overflow: hidden; color: #cccccc; text-align: center; margin-bottom: 1rem; padding-left: 8%; }
+.pagination { overflow: hidden; color: #cccccc; text-align: center; margin-top: 5rem; margin-bottom: 1rem; padding-left: 8%; }
 
 .pagination a:hover { color: #8fcdff; }
 
