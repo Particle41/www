@@ -137,12 +137,15 @@
 			<p>We are using Jekyll to build our static blog contents. If you wish to know more about Jekyll and want to explore it in details, then please visit its <a href="http://jekyllrb.com/docs/home/">official site</a> it has good documentation. 
 To publish a blog post we just have to follow three simple steps.</p>
 <ul>
-  <li>Write a blog</li>
-  <li>Build Jekyll</li>
-  <li>Publish to website</li>
+  <li>Write a blog.</li>
+  <li>Build Jekyll.</li>
+  <li>Publish to website.</li>
 </ul>
 
 <h3 id="write-a-blog">Write a blog</h3>
+<p>These are the following thing which you have to know before adding or writing a blog.</p>
+
+<h4 id="a-create-markdown-file"><strong>A) Create Markdown file.</strong></h4>
 <p>To start writing a blog you have to create a markdown(.md) file in <code class="highlighter-rouge">_post</code> directory. This is important that the file name should be in the following format only.</p>
 
 <p><code class="highlighter-rouge">YEAR-MONTH-DAY-title.md</code>
@@ -151,6 +154,34 @@ To publish a blog post we just have to follow three simple steps.</p>
 
 <p>While writing a blog we have to keep in mind that this is the markdown file, so we have to follow markdown syntaxes. So that our contents or thoughts which we want to represent can appear properly.
 There are lots of content available on the internet about markdown syntax. Here I am adding one link for <a href="http://daringfireball.net/projects/markdown/syntax/">quick reference</a>.</p>
+
+<h4 id="b-add-front-matter"><strong>B) Add front matter.</strong></h4>
+<p>The front matter is very important part of the blog, It has to placed at top of the file. Front matter includes some necessary information about the article like ‘layout’, ‘title’, ‘date’, ‘description’ etc.</p>
+
+<p>Here is an example of front matter.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">---
+layout: post
+title:  <span class="s2">"How to add blog post for Particle41?"</span>
+date:   2017-01-06
+author_github: hiteshrawal
+description: <span class="s2">"Write a blog and publish on particle41 website using jekyll."</span>
+---</code></pre></figure>
+
+<h4 id="c-highlighting-code"><strong>C) Highlighting code.</strong></h4>
+<p>Code highlighting can be possible via two ways ‘inline code’ or ‘highlight block’. If we want to highlight a code, in any specific language then ‘highlight block’ will be more useful. Here is how to get code highlighting to work.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	<span class="o">{</span>% highlight ruby %<span class="o">}</span>
+	class Node
+	 def initialize<span class="o">(</span>value<span class="o">)</span>
+	  @value <span class="o">=</span> value
+	 end
+	end
+	<span class="o">{</span>% endhighlight %<span class="o">}</span></code></pre></figure>
+
+<p>In that above case replace ‘ruby’ with ‘javascript’ or whatever language we are highlighting. Complete list of languages is available <a href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers/">here</a>.</p>
+
+<p>There may be a case where we want to highlight a specific word or a sentence then we can simply use back ticks(`). Wrap the text into back ticks and it will highlight.</p>
 
 <h3 id="build-jekyll">Build Jekyll</h3>
 <p>Once the content is ready, then we have to do <code class="highlighter-rouge">jekyll build</code> it will generate HTML files of our post. Make sure you will run this command from <code class="highlighter-rouge">_blog</code> directory.</p>
