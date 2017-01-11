@@ -261,7 +261,16 @@ There are lot of contents available on internet about markdonw syntax. Here I am
 	<!-- App JS -->
 	<script src="/js/functions.js"></script>
 	<script src="/js/contact.js"></script>
-	
+	<script>
+			/* 
+				BELOW SCRIPT WILL REDIRECT HTTPS PAGES TO HTTP ONLY FOR STAGING.
+				BECAUSE DISQUS INDEX HTTP & HTTPS PAGES SEPARATELY. 
+			 */
+			var host = 'stagingwwwparticle41';
+	    if ( window.location.host.includes(host) && window.location.protocol == "https:"){
+	        window.location.protocol = "http";
+	    }
+	</script>	
 </body>
 </html>
 
