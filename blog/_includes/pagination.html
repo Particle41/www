@@ -1,24 +1,29 @@
 <div class="pagination">
+  <div class="pagination-item">
   {% if page.previous.url %}
     <a href="{{page.previous.url}}"
-       title="Previous Post: {{page.previous.title}}"
-       class="pagination-item older" >
+       title="Previous Post: {{page.previous.title}}">
       &xlarr; Previous
     </a>
   {% else %}
-    <span class="pagination-item older">&xlarr; Previous</span>
-  {% endif %}
-    <a href="/blog.html"
-       class="pagination-item" >
+    <span class="no-link">&xlarr; Previous</span>
+  {% endif %}    
+  </div>
+  <div class="pagination-item">
+    <a href="/blog.html">
       Home
-    </a>
+    </a>    
+  </div>
+
+  <div class="pagination-item">
   {% if page.next.url %}
     <a href="{{page.next.url}}"
-       title="next Post: {{page.next.title}}"
-       class="pagination-item newer" >
+       title="next Post: {{page.next.title}}">
       Next &xrarr;
     </a>
   {% else %}
-    <span class="pagination-item newer">Next &xrarr;</span>
-  {% endif %}
+    <span class="no-link">Next &xrarr;</span>
+  {% endif %}    
+  </div>
+
 </div>
