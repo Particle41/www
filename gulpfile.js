@@ -692,7 +692,7 @@ var modules = {
         };
 
         var taskBuildCopy = function() {
-            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html', '!blog/**'])
+            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html', '!blog/**', '!_config.yaml'])
                 .pipe(copy('build/'));
         };
 
@@ -1118,10 +1118,17 @@ gulp.task('build:wp', function() {
 
 // publish blog, it will copy blog/_site contents to build directory.
 gulp.task('blog:publish', function(){
-    return gulp.src(['./blog/_site/**'])
+    return gulp.src(['blog/_site/**', '!blog/_site/{css,css/**}', '!./blog/_site/{js,js/**}', '!./blog/_site/{vendor,vendor/**}'])
                 .pipe(gulp.dest('build/')); 
 });
 
 
 // Defaut Task
 gulp.task('default', ['serve']);
+
+// This task will copy all required js & css files to blog as for jekyll blog and article we are using the same assets.
+gulp.task('blog:asset', function(){
+    return gulp.src(['./js**/*', './css**/**/*.*', './vendor**/**/*.*'])
+                .pipe(gulp.dest('./blog/_site/')); 
+});
+
