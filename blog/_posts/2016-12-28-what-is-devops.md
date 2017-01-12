@@ -19,7 +19,7 @@ This team approach leads to better and more efficient communication between not 
 
 ### Why __you need DevOps?__
 
-There are many benefits of a DevOps approach. This include:
+There are many benefits of a DevOps approach. These include:
 - Continuous updating and deployment meaning getting your software to market faster.
 - Because everyone is working together, there is a lower failure rate.
 - Faster time to recovery when something does go wrong.
