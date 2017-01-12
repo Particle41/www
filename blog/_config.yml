@@ -4,8 +4,12 @@ markdown: kramdown
 # Setup
 title: Particle41
 email: info@particle41.com
-description: > # this means to ignore newlines until "baseurl:"
-  Custom Development for Aggressive Entrepreneurs.
+description: ''
 
 # Stuff
 exclude: ["Gemfile"]
+
+# Global handlers
+disqus_shortname: particle41
+meta_description: 'Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.'
+staging_host: stagingwwwparticle41

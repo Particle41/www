@@ -6,7 +6,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Particle41 | Custom Development for Aggressive Entrepreneurs</title>
+	<title>
+	  
+       | Particle41
+    
+	</title>
+  <meta name="description" content=" Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available. " />	
 
 		<!-- Google Analytics -->
 		<script>
@@ -129,7 +134,7 @@
 				</span>
 
 				<h3>
-					<a href="/2017/01/06/how-to-add-post.html">How to add blog post for particle41?</a>
+					<a href="/2017/01/06/how-to-add-post.html">How to add blog post for Particle41?</a>
 				</h3>
 
 				<h6 class="blog-item-meta">
@@ -159,7 +164,7 @@
 				</h6>
 				<p> 
 				
-					The old paradigm in the IT industry was to split the development into two groups, the SoBware Development group and the OperaCons group. The soBware group was involved with wriCng code, implemenCng code, tesCng code and rewriCng code. 
+					DevOps brings all the players into one room (figuratively anyways) where one team is together for the entire lifecycle of the project. 
 				 	
 				</p>
 				<a href="/2016/12/28/what-is-devops.html" class="btn btn-primary">Learn More</a>
@@ -225,7 +230,16 @@
 	<!-- App JS -->
 	<script src="/js/functions.js"></script>
 	<script src="/js/contact.js"></script>
-	
+	<script>
+			/* 
+				BELOW SCRIPT WILL REDIRECT HTTPS PAGES TO HTTP ONLY FOR STAGING.
+				BECAUSE DISQUS INDEX HTTP & HTTPS PAGES SEPARATELY. 
+			 */
+			var host = 'stagingwwwparticle41';
+	    if ( window.location.host.includes(host) && window.location.protocol == "https:"){
+	        window.location.protocol = "http";
+	    }
+	</script>	
 </body>
 </html>
 

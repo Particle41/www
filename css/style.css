@@ -191,15 +191,24 @@ pre code {
 		Blog Paginations
 \* ------------------------------------------------------------ */
 
-.pagination { overflow: hidden; color: #cccccc; text-align: center; margin-top: 5rem; margin-bottom: 1rem; padding-left: 8%; }
+.pagination { 
+	overflow: hidden; 
+	text-align: center; 
+	margin: 3rem 0;
+	font-family: monospace; 
+	border-top: 2px solid rgba(255,255,255,.08); 
+	border-bottom: 2px solid rgba(255,255,255,.08);
+}
 
-.pagination a:hover { color: #8fcdff; }
+.pagination a:hover { color: #8fcdff; text-decoration: none; }
 
-.pagination-item { float: left; width: 30%; display: block; padding: 1em 0; border: 1px solid #eee; }
+.pagination-item { float: left; width: 33%; display: block; padding: 1em 0; }
 
-.pagination-item:first-child { border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.pagination-item:first-child { border-top-left-radius: 4px; border-bottom-left-radius: 4px; text-align: left; }
 
-.pagination-item:last-child { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+.pagination-item:last-child { border-top-right-radius: 4px; border-bottom-right-radius: 4px; text-align: right; }
+
+.no-link { color: rgba(255, 255, 255, 0.5); }
 
 /* ------------------------------------------------------------ *\
     Syntax Highlighter
@@ -706,6 +715,8 @@ textarea,
 	h1 { font-size: 40px; line-height: 1.25; }
 	h2 { font-size: 40px; line-height: 1; }
 }
+
+#disqus_thread { padding: 3rem; }
 
 /* ------------------------------------------------------------ *\
 	Helpers

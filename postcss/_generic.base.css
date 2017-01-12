@@ -82,3 +82,5 @@ $breakpoint-mobile {
 	h1 { font-size: 40px; line-height: 1.25; }
 	h2 { font-size: 40px; line-height: 1; }
 }
+
+#disqus_thread { padding: 3rem; }

@@ -6,7 +6,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Particle41 | Custom Development for Aggressive Entrepreneurs</title>
+	<title>
+	  
+      What is DevOps and why do you need it? | Particle41
+    
+	</title>
+  <meta name="description" content=" DevOps brings all the players into one room (figuratively anyways) where one team is together for the entire lifecycle of the project. " />	
 
 		<!-- Google Analytics -->
 		<script>
@@ -134,21 +139,17 @@
 		<div class="article-body">
 			<h3 id="devops-explained">DevOps <strong>Explained</strong></h3>
 
-<p>The old paradigm in the IT industry was to split the development into two groups, the SoBware Development group and the OperaCons group. The soBware group was involved with wriCng code, implemenCng code, tesCng code and rewriCng code.</p>
-
-<p>Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.</p>
-
 <p>The old paradigm in the IT industry was to split the development into two groups, the Software Development group and the Operations group. The software group was involved with writing code, implementing code, testing code and rewriting code. The operations group was involved with the systems needed to run the software, including having enough processing power, security, and efficiency and keep them all running.</p>
 
-<p>While both teams may be in the same building, like Congress they are in different rooms and rarely talk. This means the development process is drawn out over a long period of time and requires a lot of back and forth between the two teams.</p>
+<p>While both teams may be in the same building, like Congress, they are in different rooms and rarely talk. This means the development process is drawn out over a long period of time and requires a lot of back and forth between the two teams.</p>
 
-<p>DevOps brings all the players into one room (figuratively anyways) where one team is together for the entire lifecycle of the project. Each team member uses the same technologies, the same code, and the same principles making for a smoother, more consistent, process and mutual cooperation. There is a sense of empathy between the teams.</p>
+<p>DevOps brings all the players into one room (figuratively anyways) where one team is together for the entire life cycle of the project. Each team member uses the same technologies, the same code, and the same principles making for a smoother, more consistent, process and mutual cooperation. There is a sense of empathy between the teams.</p>
 
 <p>This team approach leads to better and more efficient communication between not only the development and operations teams but the other teams in the organization.</p>
 
 <h3 id="why-you-need-devops">Why <strong>you need DevOps?</strong></h3>
 
-<p>There are many benefits of a DevOps approach. These include:</p>
+<p>There are many benefits of a DevOps approach. This include:</p>
 <ul>
   <li>Continuous updating and deployment meaning getting your software to market faster.</li>
   <li>Because everyone is working together, there is a lower failure rate.</li>
@@ -164,21 +165,44 @@
 	</article><!-- /.article -->
 </div><!-- /.section-body -->
 
+<div id="disqus_thread"></div>
+
+<script>
+	var disqus_shortname = 'particle41';
+	(function() { 
+		// DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
 <div class="pagination">
+  <div class="pagination-item">
   
-    <span class="pagination-item older">« Previous</span>
-  
-    <a href="/blog.html"
-       class="pagination-item" >
+    <span class="no-link">&xlarr; Previous</span>
+      
+  </div>
+  <div class="pagination-item">
+    <a href="/blog.html">
       Home
-    </a>
+    </a>    
+  </div>
+
+  <div class="pagination-item">
   
     <a href="/2017/01/06/how-to-add-post.html"
-       title="next Post: How to add blog post for particle41?"
-       class="pagination-item newer" >
-      Next »
+       title="next Post: How to add blog post for Particle41?">
+      Next &xrarr;
     </a>
-  
+      
+  </div>
+
 </div>
 
 
@@ -239,7 +263,16 @@
 	<!-- App JS -->
 	<script src="/js/functions.js"></script>
 	<script src="/js/contact.js"></script>
-	
+	<script>
+			/* 
+				BELOW SCRIPT WILL REDIRECT HTTPS PAGES TO HTTP ONLY FOR STAGING.
+				BECAUSE DISQUS INDEX HTTP & HTTPS PAGES SEPARATELY. 
+			 */
+			var host = 'stagingwwwparticle41';
+	    if ( window.location.host.includes(host) && window.location.protocol == "https:"){
+	        window.location.protocol = "http";
+	    }
+	</script>	
 </body>
 </html>
 
