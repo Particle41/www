@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--#include virtual="head.shtml" -->
+{% include head.shtml %}
 <body>
 	<div class="wrapper">
 		<div class="fullpage-background" id="background"></div><!-- /.fullpage-background -->
