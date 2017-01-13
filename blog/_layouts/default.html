@@ -1,13 +1,19 @@
-<!--#include virtual="../partials/header-secondary.shtml" -->
-{% include header-secondary.shtml %}
-{% include nav.shtml %}
-
-<div class="container">
-	<div class="shell">
-		<div class="main main-primary">
-			<section class="section-blog">
-				{{ content }}
-			</section><!-- /.section-blog -->
-
-		</div><!-- /.main -->
-{% include footer.shtml %}
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.shtml  %}
+	<body>
+		<div class="wrapper">
+			<div class="fullpage-background" id="background"></div><!-- /.fullpage-background -->
+			{% include header-secondary.shtml %}
+			{% include nav.shtml %}
+			<div class="container">
+				<div class="shell">
+					<div class="main" id="fullpage">
+						{{ content }}
+					</div> <!-- /.main -->
+					{% include footer.shtml %}
+				</div> <!-- /.shell -->
+			</div> <!-- /.container -->	
+		</div> <!-- /.wrapper -->
+	</body>
+</html>
