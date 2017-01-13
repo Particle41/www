@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.shtml  %}
+	<body>
+		<div class="wrapper wrapper-secondary">
+			{% include header-secondary.shtml %}
+			{% include nav.shtml %}
+			<div class="container">
+				<div class="shell">
+					<div class="main main-primary">
+						{{ content }}
+					</div> <!-- /.main -->
+					{% include footer.shtml %}
+				</div> <!-- /.shell -->
+			</div> <!-- /.container -->	
+		</div> <!-- /.wrapper -->
+	</body>
+</html>
