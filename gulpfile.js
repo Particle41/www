@@ -1126,7 +1126,7 @@ gulp.task('blog:publish', function(){
 // Defaut Task
 gulp.task('default', ['serve']);
 
-// This task will copy all required js & css files to blog as for jekyll blog and article we are using the same assets.
+// This task will copy all required js & css files into blog directory, because in jekyll blog and article we are using the same assets.
 gulp.task('blog:asset', function(){
     return gulp.src(['./js**/*', './css**/**/*.*', './vendor**/**/*.*'])
                 .pipe(gulp.dest('./blog/_site/')); 
