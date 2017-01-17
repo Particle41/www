@@ -1,0 +1,41 @@
+---
+layout: default-secondary
+---
+
+<section class="section-blog">
+	<header class="section-head">
+		<h1>Notes <strong>from Our Team</strong></h1>
+
+		<p>Particle41 partners with key cloud infrastructure, automation, and management providers to ensure our clients take advantage of the best cloud solutions available.</p>
+	</header><!-- /.section-head -->
+	<div class="section-body">
+		<ol class="blog-items">
+
+			{% for post in site.posts %}
+				<li class="blog-item">
+					<span class="blog-item-icon">
+						<i class="ico-pencil"></i>
+					</span>
+
+					<h3>
+						<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+					</h3>
+
+					<h6 class="blog-item-meta">
+						- <a href="{{ post.url | relative_url }}">{{ site.data.authors[post.author_github].name }}</a> 
+						| <a href="{{ post.url | relative_url }}">{{ post.date | date: "%-d %B, %Y" }}</a>
+					</h6>
+					<p> 
+					{% if post.description %}
+						{{ post.description | escape }} 
+					{% else %}
+					 	{{ post.excerpt | strip_html }}
+					{% endif %} 	
+					</p>
+					<a href="{{ post.url | relative_url }}" class="btn btn-primary">Learn More</a>
+				</li><!-- /.blog-item -->								
+			{% endfor %}
+
+		</ol><!-- /.blog-items -->
+	</div><!-- /.section-body -->
+</section><!-- /.section-blog -->

@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--#include virtual="head.shtml" -->
-<body>
-	<div class="wrapper">
-		<div class="fullpage-background" id="background"></div><!-- /.fullpage-background -->
-		
-		<header class="header">
-				<div class="header-inner">
-					<a href="home.html" class="logo"></a>
+<header class="header">
+		<div class="header-inner">
+			<a href="/home.html" class="logo"></a>
 
-					<nav class="nav-secondary">
-						<ul>
-							<li>
-								<a href="contact.html">Contact Us</a>
-							</li>
-						</ul>
-					</nav><!-- /.nav-secondary -->
-				</div><!-- /.header-inner -->
-		</header><!-- /.header -->
+			<nav class="nav-secondary">
+				<ul>
+					<li>
+						<a href="/contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</nav><!-- /.nav-secondary -->
+		</div><!-- /.header-inner -->
+</header><!-- /.header -->
 
-		<button type="button" class="nav-toggle">
-			<span></span>
-			
-			<span></span>
-			
-			<span></span> 
-		</button>
+<button type="button" class="nav-toggle">
+	<span></span>
+	
+	<span></span>
+	
+	<span></span> 
+</button>

@@ -1,39 +1,41 @@
 ---
-layout: default
+layout: default-secondary
 comments: true
 ---
-<div class="section-body">
-	<article class="article">
-		<header class="article-head">
-			{% if page.image_url %}		
-				<div class="article-title">
-					<h2>{{ page.title }}</h2>
+<section class="section-blog">
+	<div class="section-body">
+		<article class="article">
+			<header class="article-head">
+				{% if page.image_url %}		
+					<div class="article-title">
+						<h2>{{ page.title }}</h2>
 
-					<div class="article-meta">
-						- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
-					</div><!-- /.article-meta -->
-				</div><!-- /.article-title -->
-				<figure class="article-image">
-					<img src="{{ page.image_url }}" alt="" />
-				</figure><!-- /.article-image -->
-			{% else %}
-				<div class="article-title-without-image">
-					<h2>{{ page.title }}</h3>
+						<div class="article-meta">
+							- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
+						</div><!-- /.article-meta -->
+					</div><!-- /.article-title -->
+					<figure class="article-image">
+						<img src="{{ page.image_url }}" alt="" />
+					</figure><!-- /.article-image -->
+				{% else %}
+					<div class="article-title-without-image">
+						<h2>{{ page.title }}</h3>
 
-					<div class="article-meta">
-						- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
-					</div><!-- /.article-meta -->
-				</div><!-- /.article-title-without-image -->
-			{% endif %}
-		</header><!-- /.article-head -->
+						<div class="article-meta">
+							- {{ site.data.authors[page.author_github].name }} | {{ page.date | date: "%-d %B, %Y" }} 
+						</div><!-- /.article-meta -->
+					</div><!-- /.article-title-without-image -->
+				{% endif %}
+			</header><!-- /.article-head -->
 
-		<div class="article-body">
-			{{ content }}
-		</div><!-- /.article-body -->
-	</article><!-- /.article -->
-</div><!-- /.section-body -->
+			<div class="article-body">
+				{{ content }}
+			</div><!-- /.article-body -->
+		</article><!-- /.article -->
+	</div><!-- /.section-body -->
 
-{% include comment.html %}
+	{% include utils/comment.html %}
 
-{% include pagination.html %}
+	{% include utils/pagination.html %}
+</section><!-- /.section-blog -->
 
