@@ -1,0 +1,68 @@
+---
+layout: default-secondary
+---
+
+<div class="form-contact">
+	<form method="POST" id="contact-form">
+		<div class="form-head">
+			<h1> {{ page.heading }} </h1>
+
+			<p> {{ page.heading_text }} </p>
+		</div><!-- /.form-head -->
+		<div class="form-body">
+			<div class="form-content">
+				<div class="form-row">
+					<input type="text" class="field" name="name" id="name" value="" required />
+
+					<label for="name" class="form-label">Name <span class="form-asterisk">*</span></label>
+				</div><!-- /.form-row -->
+
+				<div class="form-row">
+					<input type="email" class="field" name="email" id="email" value="" required />
+
+					<label for="email" class="form-label">Email <span class="form-asterisk">*</span></label>
+				</div><!-- /.form-row -->
+
+				<div class="form-row">
+					<input type="tel" class="field" name="phone" id="phone" value="" />
+
+					<label for="phone" class="form-label">Phone</label>
+				</div><!-- /.form-row -->
+
+				<div class="form-row">
+					<textarea class="field textarea" name="message" id="message" rows="1" cols="20"></textarea>
+
+					<label for="message" class="form-label">Message</label>
+				</div><!-- /.form-row -->
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary form-btn">Send Message</button>
+				</div><!-- /.form-actions -->
+			</div><!-- /.form-content -->
+
+			<div class="form-aside">
+				<ul class="contacts">
+					<li class="contacts-item contacts-item-small">
+						<i class="ico-smartphone"></i>
+
+						<a href="tel:{{ site.data.contactinfo['office']['us'].phone_no }}">{{ site.data.contactinfo['office']['us'].phone_no }}</a>
+					</li><!-- /.contacts-item contacts-item-small -->
+
+					<li class="contacts-item contacts-item-medium">
+						<i class="ico-envelope"></i>
+
+						<a href="mailto:{{ site.data.contactinfo['sales_email'] }}" target="_blank">{{ site.data.contactinfo['sales_email'] }}</a>
+					</li><!-- /.contacts-item contacts-item-medium -->
+
+					<li class="contacts-item contacts-item-large">
+						<i class="ico-marker"></i>
+
+						<address>
+							<a href="{{ site.data.contactinfo['office']['us'].gmap }}" target="_blank">{{ site.data.contactinfo['office']['us'].address }}</a>
+						</address>
+					</li><!-- /.contacts-item contacts-item-large -->
+				</ul><!-- /.contacts -->
+			</div><!-- /.form-aside -->
+		</div><!-- /.form-body -->
+	</form>
+</div><!-- /.form-contact -->
