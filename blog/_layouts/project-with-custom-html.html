@@ -1,0 +1,22 @@
+---
+layout: default-secondary
+---
+
+<section class="section-project">
+	<header class="section-head">
+		<h2>{{ page.heading }}</h2>
+
+		<p>{{ page.heading_text }}</p>
+	</header><!-- /.section-head -->
+
+	<div class="section-block">
+		<div class="section-image">
+			<figure>
+				<img src="{{ page.image_path }}" alt="{{ page.title }}" />
+			</figure>
+		</div><!-- /.section-image -->
+
+		{{ content }}
+		
+	</div><!-- /.section-block -->
+</section>

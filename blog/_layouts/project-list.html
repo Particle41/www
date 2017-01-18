@@ -1,0 +1,30 @@
+---
+layout: default-secondary
+---
+
+<section class="section-case-studies">
+	<header class="section-head">
+		<h1>{{ page.heading }}</h1>
+
+		<p>{{ page.heading_text }}</p>
+	</header><!-- /.section-head -->
+
+	<div class="section-body">
+		<ul class="list-case-studies">
+
+			{% for project in site.projects %}
+				{% assign loopindex = forloop.index | modulo: 3 %}
+				{% if loopindex == 1 %}
+					{% assign list_item_css = 'list-item-1' %}
+				{% else %}
+					{% assign list_item_css = 'list-item-2' %}
+				{% endif %}
+				<li class="{{ list_item_css }}">
+					<a href="{{ project.url }}">
+						<img src="{{ project.image_path }}" alt="{{ project.title }}" />
+					</a>
+				</li>
+			{% endfor %}
+		</ul><!-- /.list-case-studies -->
+	</div><!-- /.section-body -->
+</section><!-- /.section-case-studies -->

@@ -1,0 +1,25 @@
+<section class="section-testimonials section-fullpage">
+	<div class="section-container">
+		<figure class="section-image animated">
+			<img src="css/images/temp/photo8.png" alt="" />
+		</figure><!-- /.section-image -->
+
+		<div class="section-content">
+			<h2>What Our <strong>Clients Say</strong></h2>
+			<div class="section-inner-content">
+				<div class="slider-testimonials owl-carousel" id="testimonials">
+
+					{% for testimonial in site.data.testimonials %}
+						<div class="slide">
+							<blockquote class="testimonial">
+								<p> {{ testimonial.client_comment }} </p>
+								<h5>- <strong> {{ testimonial.client_name }} </strong>, {{ testimonial.client_firm }} </h5>
+							</blockquote><!-- /.testimonial -->
+						</div><!-- /.slide -->
+					{% endfor %}
+
+				</div><!-- /.slider-testimonials -->
+			</div><!-- /.section-inner-content -->
+		</div><!-- /.section-content -->
+	</div><!-- /.section-container -->
+</section><!-- /.section-testimonials -->

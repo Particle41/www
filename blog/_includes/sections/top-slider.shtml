@@ -1,0 +1,30 @@
+<section class="section-intro section-fullpage">
+	<div class="section-container">
+		<div class="section-images">
+			<img src="css/images/temp/iphone1.png" alt="iPhone Screenshot" class="animated" />
+
+			<img src="css/images/temp/iphone2.png" alt="iPhone Screenshot" class="animated" />
+
+			<img src="css/images/temp/iphone3.png" alt="iPhone Screenshot" class="animated" />
+		</div><!-- /.section-images -->
+
+		<div class="section-content animated">
+			<div class="section-content-inner">
+				<div class="slider-about">
+					<div class="slides owl-carousel">
+					{% for slide in site.data.topslider %}
+						<div class="slide">
+							<h1> {{ slide.header }} </h1>
+							<p> {{ slide.description }} </p>
+							<a href="services.html" class="btn btn-primary">Learn More</a>
+						</div><!-- /.slide -->
+					{% endfor %}
+
+					</div><!-- /.slides owl-carousel -->
+				</div><!-- /.slider-about -->
+			</div><!-- /.section-content-inner -->
+		</div><!-- /.section-content -->
+
+		<span class="section-bubble"></span><!-- /.section-bubble -->
+	</div><!-- /.section-container -->
+</section><!-- /.section-intro -->
