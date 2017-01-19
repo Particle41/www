@@ -1,0 +1,35 @@
+---
+layout: default-secondary
+---
+
+<section class="section-project">
+	<header class="section-head">
+		<h1> {{ page.page_heading }} </h1>
+		<h3> {{ page.page_subheading }} </h3>
+    <hr>
+	</header><!-- /.section-head -->
+
+	{% for job in site.data.jobs %}
+		<div class="section-block">
+			<div class="section-image">
+				<figure>
+				 {% if job.ico_image_path %}
+					<img src="{{ job.ico_image_path }}" alt="" height="200px" width="200px"/>
+				 {% else %}
+				 	<img src="{{ page.default_ico_image_path }}" alt="" height="200px" width="200px"/>
+				 {% endif %}
+				</figure>
+			</div><!-- /.section-image -->
+
+			<div class="section-entry">
+	      <h2>{{ job.title }}</h2>
+	      <h5>{{ job.experience }}</h5>
+				<p>{{ job.description }}</p>
+	      <h6>{{ job.skills }}</h6>
+	      <a href="{{ job.details_url }}" class="btn btn-primary">Learn More</a>
+				<a href="mailto:careers@particle41.com" class="btn btn-primary">Apply</a>
+			</div><!-- /.section-entry -->
+		</div><!-- /.section-block -->	
+	{% endfor %}
+
+</section><!-- /.section-project -->
